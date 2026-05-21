@@ -1,0 +1,21 @@
+{
+  "name": "gurukul-preschool",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "npm@10",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "build": "npm --prefix frontend run build",
+    "dev": "npm --prefix frontend run dev",
+    "start": "npm --prefix backend start"
+  },
+  "dependencies": {
+    "serverless-http": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

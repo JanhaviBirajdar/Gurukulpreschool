@@ -35,10 +35,9 @@ export default function Navbar() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/80 dark:bg-[#1A1B2E]/80 backdrop-blur-xl shadow-lg'
+          ? 'glass dark:!bg-surface-dark/80 dark:!border-white/5'
           : 'bg-transparent'
       }`}
-      style={isDark && scrolled ? { background: 'rgba(26,27,46,0.8)', backdropFilter: 'blur(16px)' } : scrolled ? { background: 'rgba(255,255,255,0.8)', backdropFilter: 'blur(16px)' } : {}}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -46,15 +45,14 @@ export default function Navbar() {
           <Link to="/" className="flex items-center gap-2 group">
             <motion.div
               whileHover={{ rotate: 10, scale: 1.1 }}
-              className="w-10 h-10 md:w-12 md:h-12 rounded-2xl flex items-center justify-center text-white font-bold text-xl"
-              style={{ background: 'linear-gradient(135deg, #FF6B9D, #A78BFA)' }}
+              className="w-10 h-10 md:w-12 md:h-12 rounded-2xl flex items-center justify-center text-white font-bold text-xl bg-gradient-to-br from-candy to-lavender shadow-lg shadow-candy/30"
             >
               G
             </motion.div>
             <div className="flex flex-col">
-              <span className="font-heading font-extrabold text-lg md:text-xl leading-tight" style={{ fontFamily: 'Nunito' }}>
-                <span className="text-[#FF6B9D]">Gurukul</span>{' '}
-                <span className={isDark ? 'text-[#C4B5FD]' : 'text-[#A78BFA]'}>Pre School</span>
+              <span className="font-heading font-extrabold text-lg md:text-xl leading-tight">
+                <span className="text-candy">Gurukul</span>{' '}
+                <span className="text-lavender dark:text-lavender-light">Pre School</span>
               </span>
             </div>
           </Link>
@@ -65,19 +63,17 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-300 ${
+                className={`relative px-4 py-2 rounded-xl text-sm font-semibold font-body transition-all duration-300 ${
                   location.pathname === link.path
-                    ? 'text-[#FF6B9D]'
-                    : isDark ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+                    ? 'text-candy'
+                    : 'text-text-secondary hover:text-text-primary dark:text-text-secondary-dark dark:hover:text-text-primary-dark'
                 }`}
-                style={{ fontFamily: 'Quicksand' }}
               >
                 {link.name}
                 {location.pathname === link.path && (
                   <motion.div
                     layoutId="activeNav"
-                    className="absolute bottom-0 left-2 right-2 h-0.5 rounded-full"
-                    style={{ background: 'linear-gradient(90deg, #FF6B9D, #A78BFA)' }}
+                    className="absolute bottom-0 left-2 right-2 h-0.5 rounded-full bg-gradient-to-r from-candy to-lavender"
                   />
                 )}
               </Link>
@@ -91,7 +87,7 @@ export default function Navbar() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onClick={toggleTheme}
-              className={`p-2.5 rounded-xl transition-colors ${isDark ? 'bg-[#252640] text-yellow-300' : 'bg-purple-50 text-purple-600'}`}
+              className="p-2.5 rounded-xl transition-colors bg-lavender/10 text-lavender hover:bg-lavender/20 dark:bg-surface-dark dark:text-sunny dark:hover:bg-surface-dark/80"
               aria-label="Toggle theme"
             >
               {isDark ? (
@@ -105,7 +101,7 @@ export default function Navbar() {
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={() => setIsOpen(!isOpen)}
-              className={`lg:hidden p-2.5 rounded-xl ${isDark ? 'bg-[#252640] text-white' : 'bg-purple-50 text-purple-600'}`}
+              className="lg:hidden p-2.5 rounded-xl bg-lavender/10 text-lavender dark:bg-surface-dark dark:text-text-primary-dark"
               aria-label="Toggle menu"
             >
               <div className="w-5 h-5 flex flex-col justify-center gap-1">
@@ -134,11 +130,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden overflow-hidden"
-            style={{
-              background: isDark ? 'rgba(26,27,46,0.95)' : 'rgba(255,255,255,0.95)',
-              backdropFilter: 'blur(20px)',
-            }}
+            className="lg:hidden overflow-hidden glass dark:!bg-surface-dark/95"
           >
             <div className="px-4 py-4 space-y-1">
               {navLinks.map((link, i) => (
@@ -150,12 +142,11 @@ export default function Navbar() {
                 >
                   <Link
                     to={link.path}
-                    className={`block px-4 py-3 rounded-xl font-semibold transition-all ${
+                    className={`block px-4 py-3 rounded-xl font-semibold font-body transition-all ${
                       location.pathname === link.path
-                        ? 'bg-gradient-to-r from-pink-50 to-purple-50 text-[#FF6B9D]'
-                        : isDark ? 'text-gray-300 hover:bg-[#252640]' : 'text-gray-600 hover:bg-gray-50'
+                        ? 'bg-gradient-to-r from-candy/10 to-lavender/10 text-candy'
+                        : 'text-text-secondary hover:bg-surface dark:text-text-secondary-dark dark:hover:bg-surface-dark'
                     }`}
-                    style={{ fontFamily: 'Quicksand' }}
                   >
                     {link.name}
                   </Link>

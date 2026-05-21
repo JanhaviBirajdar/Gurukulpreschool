@@ -11,8 +11,7 @@ export default function WhatsAppButton() {
       transition={{ delay: 2.5, type: 'spring', stiffness: 200 }}
       whileHover={{ scale: 1.15 }}
       whileTap={{ scale: 0.9 }}
-      className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full flex items-center justify-center shadow-lg group"
-      style={{ background: '#25D366' }}
+      className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full flex items-center justify-center shadow-lg group bg-[#25D366]"
       aria-label="Chat on WhatsApp"
     >
       <motion.div
@@ -25,13 +24,12 @@ export default function WhatsAppButton() {
       </motion.div>
       
       {/* Tooltip */}
-      <div className="absolute right-16 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-lg text-sm font-semibold text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
-        style={{ background: '#25D366', fontFamily: 'Quicksand' }}>
+      <div className="absolute right-16 top-1/2 -translate-y-1/2 px-3 py-1.5 rounded-lg text-sm font-semibold text-white whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none bg-[#25D366] font-body">
         Chat with us!
       </div>
 
       {/* Ping animation */}
-      <span className="absolute inset-0 rounded-full animate-ping opacity-20" style={{ background: '#25D366' }} />
+      <span className="absolute inset-0 rounded-full animate-ping opacity-20 bg-[#25D366]" />
     </motion.a>
   )
 }

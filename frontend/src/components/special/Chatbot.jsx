@@ -53,8 +53,7 @@ export default function Chatbot() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-24 right-6 z-40 w-14 h-14 rounded-full flex items-center justify-center shadow-lg"
-        style={{ background: 'linear-gradient(135deg, #A78BFA, #FF6B9D)' }}
+        className="fixed bottom-24 right-6 z-40 w-14 h-14 rounded-full flex items-center justify-center shadow-lg bg-gradient-to-br from-lavender to-candy text-white"
         aria-label="Open chatbot"
       >
         <span className="text-2xl">{isOpen ? '✕' : '🤖'}</span>
@@ -68,50 +67,38 @@ export default function Chatbot() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
             transition={{ duration: 0.3 }}
-            className="fixed bottom-40 right-6 z-50 w-80 sm:w-96 rounded-3xl overflow-hidden shadow-2xl flex flex-col"
-            style={{
-              maxHeight: '450px',
-              background: isDark ? '#1A1B2E' : '#FFFFFF',
-              border: `2px solid ${isDark ? 'rgba(167,139,250,0.2)' : 'rgba(167,139,250,0.15)'}`,
-            }}
+            className="fixed bottom-40 right-6 z-50 w-80 sm:w-96 rounded-3xl overflow-hidden shadow-2xl flex flex-col bg-white dark:bg-[#1A1B2E] border-2 border-lavender/15 dark:border-lavender/20 max-h-[450px]"
           >
             {/* Header */}
-            <div className="px-5 py-4 flex items-center gap-3"
-              style={{ background: 'linear-gradient(135deg, #A78BFA, #FF6B9D)' }}>
+            <div className="px-5 py-4 flex items-center gap-3 bg-gradient-to-br from-lavender to-candy">
               <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-xl">🤖</div>
               <div>
-                <p className="text-white font-bold text-sm" style={{ fontFamily: 'Nunito' }}>Guru - School Assistant</p>
-                <p className="text-white/70 text-xs" style={{ fontFamily: 'Quicksand' }}>Online • Here to help!</p>
+                <p className="text-white font-bold text-sm font-heading">Guru - School Assistant</p>
+                <p className="text-white/70 text-xs font-body">Online • Here to help!</p>
               </div>
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-3" style={{ maxHeight: '280px' }}>
+            <div className="flex-1 overflow-y-auto p-4 space-y-3 max-h-[280px]">
               {messages.map((msg, i) => (
                 <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
                   className={`flex ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}>
-                  <div className="max-w-[80%] px-4 py-2.5 rounded-2xl text-sm whitespace-pre-line"
-                    style={{
-                      background: msg.from === 'user'
-                        ? 'linear-gradient(135deg, #FF6B9D, #A78BFA)'
-                        : isDark ? 'rgba(37,38,64,0.8)' : '#F3F0FF',
-                      color: msg.from === 'user' ? 'white' : isDark ? '#F1E8FF' : '#2D1B4E',
-                      fontFamily: 'Quicksand', fontWeight: 500,
-                      borderBottomRightRadius: msg.from === 'user' ? '4px' : '16px',
-                      borderBottomLeftRadius: msg.from === 'bot' ? '4px' : '16px',
-                    }}>
+                  <div className={`max-w-[80%] px-4 py-2.5 text-sm whitespace-pre-line font-body font-medium ${
+                    msg.from === 'user'
+                      ? 'bg-gradient-to-br from-candy to-lavender text-white rounded-2xl rounded-br-sm'
+                      : 'bg-lavender/10 dark:bg-surface-dark/80 text-text-primary dark:text-text-primary-dark rounded-2xl rounded-bl-sm'
+                  }`}>
                     {msg.text}
                   </div>
                 </motion.div>
               ))}
               {typing && (
                 <div className="flex justify-start">
-                  <div className="px-4 py-3 rounded-2xl flex gap-1"
-                    style={{ background: isDark ? 'rgba(37,38,64,0.8)' : '#F3F0FF' }}>
+                  <div className="px-4 py-3 flex gap-1 bg-lavender/10 dark:bg-surface-dark/80 rounded-2xl rounded-bl-sm">
                     {[0, 1, 2].map(i => (
                       <motion.div key={i} animate={{ y: [0, -5, 0] }}
                         transition={{ duration: 0.5, delay: i * 0.15, repeat: Infinity }}
-                        className="w-2 h-2 rounded-full" style={{ background: '#A78BFA' }} />
+                        className="w-2 h-2 rounded-full bg-lavender" />
                     ))}
                   </div>
                 </div>
@@ -119,22 +106,16 @@ export default function Chatbot() {
             </div>
 
             {/* Input */}
-            <div className="p-3 border-t" style={{ borderColor: isDark ? 'rgba(255,255,255,0.1)' : '#F0E6FF' }}>
+            <div className="p-3 border-t border-lavender/20 dark:border-white/10">
               <div className="flex gap-2">
                 <input value={input} onChange={e => setInput(e.target.value)}
                   onKeyDown={e => e.key === 'Enter' && send()}
                   placeholder="Ask me anything..."
-                  className="flex-1 px-4 py-2.5 rounded-xl text-sm border focus:outline-none focus:border-[#A78BFA] transition-colors"
-                  style={{
-                    background: isDark ? 'rgba(37,38,64,0.6)' : '#F8F4FF',
-                    color: isDark ? '#F1E8FF' : '#2D1B4E',
-                    borderColor: isDark ? 'rgba(255,255,255,0.1)' : '#E5E7EB',
-                    fontFamily: 'Quicksand',
-                  }} />
+                  className="flex-1 px-4 py-2.5 rounded-xl text-sm border focus:outline-none focus:border-lavender transition-colors bg-lavender/5 dark:bg-surface-dark/60 text-text-primary dark:text-text-primary-dark border-black/10 dark:border-white/10 font-body"
+                />
                 <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
                   onClick={send}
-                  className="px-4 py-2.5 rounded-xl text-white font-bold text-sm"
-                  style={{ background: 'linear-gradient(135deg, #FF6B9D, #A78BFA)', fontFamily: 'Quicksand' }}>
+                  className="px-4 py-2.5 rounded-xl text-white font-bold text-sm bg-gradient-to-br from-candy to-lavender font-body hover:shadow-lg hover:shadow-candy/30">
                   Send
                 </motion.button>
               </div>

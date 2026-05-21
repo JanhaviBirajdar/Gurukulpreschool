@@ -26,17 +26,15 @@ export default function GalleryPage() {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-20">
       {/* Header */}
-      <section className="section-padding text-center"
-        style={{ background: isDark ? 'linear-gradient(135deg, #1A1B2E, #2D1B4E)' : 'linear-gradient(135deg, #FFF5F7, #F0E6FF)' }}>
+      <section className="section-padding text-center gradient-bg">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4"
-            style={{ background: isDark ? 'rgba(255,154,86,0.2)' : 'rgba(255,154,86,0.15)', color: isDark ? '#FFB17A' : '#E07830', fontFamily: 'Quicksand' }}>
+          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4 bg-peach/15 text-peach dark:bg-peach/20 dark:text-peach-light font-body">
             📸 Memories
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6" style={{ fontFamily: 'Nunito', color: isDark ? '#F1E8FF' : '#2D1B4E' }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 font-heading text-text-primary dark:text-text-primary-dark">
             Our <span className="gradient-text">Gallery</span>
           </h1>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: isDark ? '#B8A8D9' : '#6B5B8D', fontFamily: 'Quicksand' }}>
+          <p className="text-lg max-w-2xl mx-auto font-body text-text-secondary dark:text-text-secondary-dark">
             Glimpses of joy, laughter, and magical moments at Gurukul Pre School.
           </p>
         </motion.div>
@@ -48,15 +46,12 @@ export default function GalleryPage() {
           {categories.map(cat => (
             <motion.button key={cat} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
               onClick={() => setActive(cat)}
-              className="px-5 py-2 rounded-full text-sm font-bold transition-all"
-              style={{
-                fontFamily: 'Quicksand',
-                background: active === cat
-                  ? 'linear-gradient(135deg, #FF6B9D, #A78BFA)' 
-                  : isDark ? 'rgba(37,38,64,0.8)' : 'white',
-                color: active === cat ? 'white' : isDark ? '#B8A8D9' : '#6B5B8D',
-                boxShadow: active === cat ? '0 4px 15px rgba(255,107,157,0.3)' : '0 2px 8px rgba(0,0,0,0.08)',
-              }}>
+              className={`px-5 py-2 rounded-full text-sm font-bold transition-all font-body ${
+                active === cat
+                  ? 'bg-gradient-to-r from-candy to-lavender text-white shadow-lg shadow-candy/30'
+                  : 'bg-white dark:bg-surface-dark text-text-secondary dark:text-text-secondary-dark hover:shadow-md border border-black/5 dark:border-white/5'
+              }`}
+            >
               {cat}
             </motion.button>
           ))}
@@ -81,8 +76,8 @@ export default function GalleryPage() {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
                   <div>
-                    <p className="text-white font-bold text-sm" style={{ fontFamily: 'Nunito' }}>{item.title}</p>
-                    <p className="text-white/70 text-xs" style={{ fontFamily: 'Quicksand' }}>{item.category}</p>
+                    <p className="text-white font-bold text-sm font-heading">{item.title}</p>
+                    <p className="text-white/70 text-xs font-body">{item.category}</p>
                   </div>
                 </div>
               </motion.div>
@@ -102,7 +97,7 @@ export default function GalleryPage() {
               <img src={lightbox.src.replace('w=400', 'w=800').replace('h=300', 'h=600').replace('h=400', 'h=600').replace('h=350', 'h=600')}
                 alt={lightbox.title} className="w-full rounded-2xl shadow-2xl" />
               <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent rounded-b-2xl">
-                <p className="text-white font-bold text-lg" style={{ fontFamily: 'Nunito' }}>{lightbox.title}</p>
+                <p className="text-white font-bold text-lg font-heading">{lightbox.title}</p>
               </div>
               <button onClick={() => setLightbox(null)}
                 className="absolute top-3 right-3 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center hover:bg-white/30 transition">

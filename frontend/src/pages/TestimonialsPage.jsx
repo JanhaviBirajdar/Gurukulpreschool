@@ -12,13 +12,13 @@ const testimonials = [
 
 function Stars({ count }) {
   return (
-    <div className="flex gap-1">
+    <div className="flex gap-1 text-sunny">
       {[1, 2, 3, 4, 5].map(i => (
         <motion.span key={i}
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: i * 0.1 }}
-          className="text-lg"
+          className="text-lg drop-shadow-sm"
         >
           {i <= count ? '⭐' : '☆'}
         </motion.span>
@@ -41,17 +41,15 @@ export default function TestimonialsPage() {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-20">
       {/* Header */}
-      <section className="section-padding text-center"
-        style={{ background: isDark ? 'linear-gradient(135deg, #1A1B2E, #2D1B4E)' : 'linear-gradient(135deg, #FFF5F7, #F0E6FF)' }}>
+      <section className="section-padding text-center gradient-bg">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4"
-            style={{ background: isDark ? 'rgba(255,230,109,0.2)' : 'rgba(255,230,109,0.2)', color: isDark ? '#FFD93D' : '#C5A300', fontFamily: 'Quicksand' }}>
+          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4 bg-sunny/20 text-yellow-600 dark:text-sunny font-body">
             💬 Testimonials
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6" style={{ fontFamily: 'Nunito', color: isDark ? '#F1E8FF' : '#2D1B4E' }}>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 font-heading text-text-primary dark:text-text-primary-dark">
             What <span className="gradient-text">Parents Say</span>
           </h1>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: isDark ? '#B8A8D9' : '#6B5B8D', fontFamily: 'Quicksand' }}>
+          <p className="text-lg max-w-2xl mx-auto font-body text-text-secondary dark:text-text-secondary-dark">
             Hear from our happy families about their wonderful experience at Gurukul.
           </p>
         </motion.div>
@@ -60,27 +58,24 @@ export default function TestimonialsPage() {
       {/* Carousel */}
       <section className="section-padding">
         <div className="max-w-3xl mx-auto" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-          <div className="relative overflow-hidden rounded-3xl card-shadow p-8 md:p-12"
-            style={{ background: isDark ? 'rgba(37,38,64,0.6)' : 'white', border: '2px solid rgba(167,139,250,0.15)' }}>
-            <div className="absolute top-4 right-6 text-6xl opacity-10" style={{ color: '#A78BFA' }}>"</div>
+          <div className="relative overflow-hidden rounded-3xl card-shadow p-8 md:p-12 bg-white dark:bg-surface-dark/60 border-2 border-lavender/15 backdrop-blur-md">
+            <div className="absolute top-4 right-6 text-6xl opacity-10 text-lavender font-heading">"</div>
             <AnimatePresence mode="wait">
               <motion.div key={current}
                 initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -50 }}
                 transition={{ duration: 0.4 }}>
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl"
-                    style={{ background: 'linear-gradient(135deg, #FF6B9D20, #A78BFA20)' }}>
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br from-candy/20 to-lavender/20 shadow-inner">
                     {testimonials[current].avatar}
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg" style={{ fontFamily: 'Nunito', color: isDark ? '#F1E8FF' : '#2D1B4E' }}>
+                    <h4 className="font-bold text-lg font-heading text-text-primary dark:text-text-primary-dark">
                       {testimonials[current].name}
                     </h4>
                     <Stars count={testimonials[current].rating} />
                   </div>
                 </div>
-                <p className="text-base leading-relaxed italic"
-                  style={{ color: isDark ? '#B8A8D9' : '#6B5B8D', fontFamily: 'Quicksand', fontWeight: 500 }}>
+                <p className="text-base leading-relaxed italic font-body font-medium text-text-secondary dark:text-text-secondary-dark">
                   "{testimonials[current].text}"
                 </p>
               </motion.div>
@@ -89,23 +84,18 @@ export default function TestimonialsPage() {
             {/* Navigation */}
             <div className="flex justify-between items-center mt-8">
               <button onClick={() => setCurrent(c => (c - 1 + testimonials.length) % testimonials.length)}
-                className="w-10 h-10 rounded-full flex items-center justify-center transition-colors"
-                style={{ background: isDark ? 'rgba(255,255,255,0.1)' : '#F0E6FF', color: isDark ? '#C4B5FD' : '#7C3AED' }}>
+                className="w-10 h-10 rounded-full flex items-center justify-center transition-colors bg-lavender/10 text-lavender hover:bg-lavender/20 dark:bg-white/10 dark:text-lavender-light dark:hover:bg-white/20 font-heading text-xl">
                 ‹
               </button>
               <div className="flex gap-2">
                 {testimonials.map((_, i) => (
                   <button key={i} onClick={() => setCurrent(i)}
-                    className="w-2.5 h-2.5 rounded-full transition-all"
-                    style={{
-                      background: i === current ? '#FF6B9D' : isDark ? 'rgba(255,255,255,0.2)' : '#E0D4F5',
-                      transform: i === current ? 'scale(1.3)' : 'scale(1)',
-                    }} />
+                    className={`w-2.5 h-2.5 rounded-full transition-all ${i === current ? 'bg-candy scale-125' : 'bg-lavender/30 dark:bg-white/20 hover:bg-lavender/50'}`}
+                  />
                 ))}
               </div>
               <button onClick={() => setCurrent(c => (c + 1) % testimonials.length)}
-                className="w-10 h-10 rounded-full flex items-center justify-center transition-colors"
-                style={{ background: isDark ? 'rgba(255,255,255,0.1)' : '#F0E6FF', color: isDark ? '#C4B5FD' : '#7C3AED' }}>
+                className="w-10 h-10 rounded-full flex items-center justify-center transition-colors bg-lavender/10 text-lavender hover:bg-lavender/20 dark:bg-white/10 dark:text-lavender-light dark:hover:bg-white/20 font-heading text-xl">
                 ›
               </button>
             </div>
@@ -120,17 +110,15 @@ export default function TestimonialsPage() {
             <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: i * 0.1 }}
               whileHover={{ y: -5 }}
-              className="p-6 rounded-2xl card-shadow"
-              style={{ background: isDark ? 'rgba(37,38,64,0.5)' : 'white' }}>
+              className="p-6 rounded-2xl card-shadow bg-white dark:bg-surface-dark/50 border border-black/5 dark:border-white/5 backdrop-blur-sm">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-2xl">{t.avatar}</span>
                 <div>
-                  <p className="font-bold text-sm" style={{ fontFamily: 'Nunito', color: isDark ? '#F1E8FF' : '#2D1B4E' }}>{t.name}</p>
+                  <p className="font-bold text-sm font-heading text-text-primary dark:text-text-primary-dark">{t.name}</p>
                   <Stars count={t.rating} />
                 </div>
               </div>
-              <p className="text-sm italic leading-relaxed"
-                style={{ color: isDark ? '#B8A8D9' : '#6B5B8D', fontFamily: 'Quicksand' }}>"{t.text}"</p>
+              <p className="text-sm italic leading-relaxed font-body text-text-secondary dark:text-text-secondary-dark">"{t.text}"</p>
             </motion.div>
           ))}
         </div>

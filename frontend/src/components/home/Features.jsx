@@ -7,49 +7,49 @@ const features = [
     icon: '🛡️',
     title: 'Safe Environment',
     description: 'CCTV monitored, child-proof spaces with caring staff ensuring complete safety.',
-    color: '#FF6B9D',
-    bg: '#FFF0F5',
-    bgDark: 'rgba(255,107,157,0.15)',
+    colorClass: 'bg-candy',
+    borderColorClass: 'border-candy/20',
+    bgClass: 'bg-candy/5 dark:bg-candy/10',
   },
   {
     icon: '🎨',
     title: 'Creative Learning',
     description: 'Art, music, dance, and storytelling to nurture every child\'s creative spirit.',
-    color: '#4ECDC4',
-    bg: '#E6FFF9',
-    bgDark: 'rgba(78,205,196,0.15)',
+    colorClass: 'bg-mint',
+    borderColorClass: 'border-mint/20',
+    bgClass: 'bg-mint/5 dark:bg-mint/10',
   },
   {
     icon: '👩‍🏫',
     title: 'Qualified Teachers',
     description: 'Certified, passionate educators trained in early childhood development.',
-    color: '#A78BFA',
-    bg: '#F0E6FF',
-    bgDark: 'rgba(167,139,250,0.15)',
+    colorClass: 'bg-lavender',
+    borderColorClass: 'border-lavender/20',
+    bgClass: 'bg-lavender/5 dark:bg-lavender/10',
   },
   {
     icon: '🎮',
     title: 'Play-Based Learning',
     description: 'Learning through play, exploration, and hands-on activities every day.',
-    color: '#FFE66D',
-    bg: '#FFFDE6',
-    bgDark: 'rgba(255,230,109,0.15)',
+    colorClass: 'bg-sunny',
+    borderColorClass: 'border-sunny/20',
+    bgClass: 'bg-sunny/5 dark:bg-sunny/10',
   },
   {
     icon: '🍎',
     title: 'Healthy Nutrition',
     description: 'Balanced meals and snacks prepared with love and nutritional care.',
-    color: '#FF9A56',
-    bg: '#FFF3E6',
-    bgDark: 'rgba(255,154,86,0.15)',
+    colorClass: 'bg-peach',
+    borderColorClass: 'border-peach/20',
+    bgClass: 'bg-peach/5 dark:bg-peach/10',
   },
   {
     icon: '🌍',
     title: 'Holistic Development',
     description: 'Physical, emotional, social, and cognitive growth in perfect harmony.',
-    color: '#87CEEB',
-    bg: '#E6F7FF',
-    bgDark: 'rgba(135,206,235,0.15)',
+    colorClass: 'bg-sky',
+    borderColorClass: 'border-sky/20',
+    bgClass: 'bg-sky/5 dark:bg-sky/10',
   },
 ]
 
@@ -67,17 +67,14 @@ export default function Features() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4"
-            style={{ background: isDark ? 'rgba(78,205,196,0.2)' : 'rgba(78,205,196,0.15)', color: isDark ? '#6FE4DB' : '#2BA89A', fontFamily: 'Quicksand' }}>
+          <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-4 bg-mint/10 text-mint dark:bg-mint/20 font-body">
             ✨ Why Choose Us
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4"
-            style={{ fontFamily: 'Nunito', color: isDark ? '#F1E8FF' : '#2D1B4E' }}>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 font-heading text-text-primary dark:text-text-primary-dark">
             Why Choose{' '}
             <span className="gradient-text">Gurukul?</span>
           </h2>
-          <p className="text-lg max-w-2xl mx-auto"
-            style={{ color: isDark ? '#B8A8D9' : '#6B5B8D', fontFamily: 'Quicksand' }}>
+          <p className="text-lg max-w-2xl mx-auto font-body text-text-secondary dark:text-text-secondary-dark">
             We create a nurturing environment where every child feels loved, inspired, and excited to learn.
           </p>
         </motion.div>
@@ -95,11 +92,7 @@ export default function Features() {
               key={feature.title}
               variants={staggerItem}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="p-8 rounded-3xl transition-all duration-300 card-shadow cursor-pointer group"
-              style={{
-                background: isDark ? feature.bgDark : feature.bg,
-                border: `1px solid ${isDark ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.8)'}`,
-              }}
+              className={`p-8 rounded-3xl transition-all duration-300 card-shadow cursor-pointer group border ${feature.bgClass} ${feature.borderColorClass} hover:shadow-xl dark:hover:shadow-black/50`}
             >
               <motion.div
                 whileHover={{ rotate: [0, -10, 10, 0], scale: 1.2 }}
@@ -108,17 +101,14 @@ export default function Features() {
               >
                 {feature.icon}
               </motion.div>
-              <h3 className="text-xl font-bold mb-3"
-                style={{ fontFamily: 'Nunito', color: isDark ? '#F1E8FF' : '#2D1B4E' }}>
+              <h3 className="text-xl font-bold mb-3 font-heading text-text-primary dark:text-text-primary-dark">
                 {feature.title}
               </h3>
-              <p className="text-sm leading-relaxed"
-                style={{ color: isDark ? '#B8A8D9' : '#6B5B8D', fontFamily: 'Quicksand', fontWeight: 500 }}>
+              <p className="text-sm leading-relaxed font-body font-medium text-text-secondary dark:text-text-secondary-dark">
                 {feature.description}
               </p>
               <div
-                className="mt-4 h-1 rounded-full w-12 group-hover:w-full transition-all duration-500"
-                style={{ background: feature.color }}
+                className={`mt-4 h-1 rounded-full w-12 group-hover:w-full transition-all duration-500 ${feature.colorClass}`}
               />
             </motion.div>
           ))}

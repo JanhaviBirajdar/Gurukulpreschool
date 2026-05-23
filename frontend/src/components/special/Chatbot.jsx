@@ -53,7 +53,7 @@ export default function Chatbot() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-24 right-6 z-40 w-14 h-14 rounded-full flex items-center justify-center shadow-lg bg-gradient-to-br from-lavender to-candy text-white"
+        className="fixed bottom-24 right-6 z-40 w-16 h-16 rounded-full flex items-center justify-center shadow-lg bg-gradient-to-br from-lavender to-candy text-white"
         aria-label="Open chatbot"
       >
         <span className="text-2xl">{isOpen ? '✕' : '🤖'}</span>

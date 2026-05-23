@@ -50,7 +50,7 @@ export default function Navbar() {
               G
             </motion.div>
             <div className="flex flex-col">
-              <span className="font-heading font-extrabold text-lg md:text-xl leading-tight">
+              <span className="font-heading font-extrabold text-xl md:text-2xl leading-tight">
                 <span className="text-candy">Gurukul</span>{' '}
                 <span className="text-lavender dark:text-lavender-light">Pre School</span>
               </span>
@@ -58,12 +58,12 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-12">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`relative px-4 py-2 rounded-xl text-sm font-semibold font-body transition-all duration-300 ${
+                className={`relative px-4 py-2 rounded-xl text-base font-semibold font-body transition-all duration-300 ${
                   location.pathname === link.path
                     ? 'text-candy'
                     : 'text-text-secondary hover:text-text-primary dark:text-text-secondary-dark dark:hover:text-text-primary-dark'

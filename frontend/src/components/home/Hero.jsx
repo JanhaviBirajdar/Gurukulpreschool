@@ -19,7 +19,7 @@ export default function Hero() {
 
       <FloatingObjects />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-8 lg:gap-16 pt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-16 pt-20">
         {/* Left: Text Content */}
         <div className="flex-1 text-center lg:text-left">
           <motion.div
@@ -31,7 +31,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.5 }}
-              className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold mb-6 bg-lavender/15 text-lavender dark:bg-lavender/20 dark:text-lavender-light font-body"
+              className="inline-block px-4 py-1.5 rounded-full text-base font-semibold mb-6 bg-lavender/15 text-lavender dark:bg-lavender/20 dark:text-lavender-light font-body"
             >
               ✨ Where Learning Meets Joy
             </motion.span>
@@ -53,7 +53,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="text-lg md:text-xl max-w-xl mx-auto lg:mx-0 mb-8 font-body font-medium leading-relaxed text-text-secondary dark:text-text-secondary-dark"
+            className="text-center text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-8 font-body font-medium leading-relaxed text-text-secondary dark:text-text-secondary-dark"
           >
             Where little minds bloom with joy and wonder. A magical place of
             creative learning, warm friendships, and endless discoveries. 🌈
@@ -69,7 +69,7 @@ export default function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 rounded-2xl text-white font-bold text-base shadow-lg shadow-candy/30 bg-gradient-to-br from-candy to-candy-light font-heading hover:shadow-candy/50"
+                className="text-center px-10 py-5 rounded-2xl text-white font-bold text-lg shadow-lg shadow-candy/30 bg-gradient-to-br from-candy to-candy-light font-heading hover:shadow-candy/50"
               >
                 Explore Programs 🎓
               </motion.button>
@@ -78,7 +78,7 @@ export default function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 rounded-2xl font-bold text-base border-2 border-lavender/50 text-lavender bg-lavender/5 dark:bg-lavender/10 dark:border-lavender/30 dark:text-lavender-light transition-colors font-heading"
+                className="text-center px-10 py-5 rounded-2xl font-bold text-lg border-2 border-lavender/50 text-lavender bg-lavender/5 dark:bg-lavender/10 dark:border-lavender/30 dark:text-lavender-light transition-colors font-heading"
               >
                 Contact Us 💌
               </motion.button>
@@ -90,11 +90,11 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
-            className="flex flex-wrap gap-8 justify-center lg:justify-start mt-12"
+            className="flex flex-wrap gap-12 justify-center lg:justify-start mt-12"
           >
             {[
-              { number: '500+', label: 'Happy Students', colorClass: 'text-candy' },
-              { number: '10+', label: 'Years of Joy', colorClass: 'text-mint' },
+              { number: '1900+', label: 'Happy Students', colorClass: 'text-candy' },
+              { number: '7+', label: 'Years of Joy', colorClass: 'text-mint' },
               { number: '50+', label: 'Activities', colorClass: 'text-lavender' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">

@@ -8,7 +8,7 @@ export default function Hero() {
   const { isDark } = useTheme()
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[100dvh] flex flex-col justify-center overflow-hidden pt-12 pb-20 lg:pt-0 lg:pb-0">
       {/* Background */}
       <div className="absolute inset-0 gradient-bg" />
 
@@ -19,9 +19,10 @@ export default function Hero() {
 
       <FloatingObjects />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-16 pt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-8 lg:gap-16 w-full mt-4 lg:mt-0">
         {/* Left: Text Content */}
         <div className="flex-1 text-center lg:text-left">
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}

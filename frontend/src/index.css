@@ -210,3 +210,19 @@ h1, h2, h3, h4, h5, h6 {
     padding: 8rem 8rem;
   }
 }
+
+/* ===== Gallery Masonry ===== */
+.gallery-masonry {
+  display: flex;
+  margin-left: -24px;
+  width: auto;
+}
+
+.gallery-masonry-col {
+  padding-left: 24px;
+  background-clip: padding-box;
+}
+
+.gallery-masonry-col > div {
+  margin-bottom: 24px;
+}

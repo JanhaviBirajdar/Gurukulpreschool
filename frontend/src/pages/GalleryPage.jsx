@@ -96,14 +96,15 @@ export default function GalleryPage() {
       <section className="section-padding pb-20 relative">
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           {/* Filters */}
-          <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-16">
+          <div className="flex flex-wrap justify-center" style={{ gap: '20px', marginBottom: '60px' }}>
             {categories.map(cat => (
               <motion.button
                 key={cat}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setActive(cat)}
-                className={`px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 font-body flex items-center gap-3 shadow-md ${active === cat
+                style={{ padding: '16px 36px', fontSize: '18px' }}
+                className={`rounded-full font-bold transition-all duration-300 font-body flex items-center gap-3 shadow-md ${active === cat
                   ? 'bg-gradient-to-r from-candy via-peach to-sunny text-white shadow-candy/40 border-transparent hover:shadow-lg hover:-translate-y-1'
                   : 'bg-white dark:bg-surface-dark text-text-secondary dark:text-text-secondary-dark hover:shadow-lg hover:-translate-y-1 hover:text-candy border border-black/5 dark:border-white/5'
                   }`}
@@ -119,8 +120,8 @@ export default function GalleryPage() {
             <AnimatePresence mode="popLayout">
               <Masonry
                 breakpointCols={breakpointColumnsObj}
-                className="flex w-auto -ml-4"
-                columnClassName="pl-4 bg-clip-padding"
+                className="flex w-auto" style={{ marginLeft: '-20px' }}
+                columnClassName="bg-clip-padding" columnStyle={{ paddingLeft: '20px' }}
               >
                 {filtered.map((item, i) => (
                   <motion.div
@@ -131,7 +132,8 @@ export default function GalleryPage() {
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.4, delay: i * 0.05 }}
                     onClick={() => setIndex(i)}
-                    className="mb-4 rounded-3xl overflow-hidden cursor-pointer group relative shadow-md hover:shadow-2xl transition-all duration-500 border border-black/5 dark:border-white/5"
+                    style={{ marginBottom: '24px' }}
+                    className="rounded-3xl overflow-hidden cursor-pointer group relative shadow-md hover:shadow-2xl transition-all duration-500 border border-black/5 dark:border-white/5"
                   >
                     <img
                       src={item.src}

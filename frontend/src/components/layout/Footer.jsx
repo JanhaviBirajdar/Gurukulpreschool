@@ -47,7 +47,7 @@ export default function Footer() {
         </svg>
       </div>
 
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:pr-20 lg:pl-32 xl:pl-40 pt-24 pb-12">
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-24 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
           {/* Logo & About */}
           <div className="lg:col-span-1 flex flex-col">
@@ -73,8 +73,6 @@ export default function Footer() {
                 >
                   {social === 'facebook' && <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>}
                   {social === 'instagram' && <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="https://www.instagram.com/gurukul.preschooltalegao?utm_source=qr&igsh=MXZjdXBvNmxhdnNncA==" /></svg>}
-                  {social === 'youtube' && <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg>}
-                  {social === 'twitter' && <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>}
                 </motion.a>
               ))}
             </div>
@@ -121,10 +119,11 @@ export default function Footer() {
                 className="px-6 py-4 rounded-2xl text-base bg-white/10 text-white placeholder-purple-300/50 dark:placeholder-slate-500 border border-white/10 focus:border-candy focus:ring-1 focus:ring-candy focus:outline-none transition-colors font-body"
               />
               <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 type="submit"
-                className="px-6 py-4 rounded-2xl text-lg font-bold text-white transition-all bg-gradient-to-r from-candy to-lavender shadow-lg hover:shadow-candy/40"
+                style={{ padding: '16px 36px', fontSize: '18px' }}
+                className="w-full rounded-full font-bold transition-all duration-300 font-body flex items-center justify-center gap-3 shadow-md bg-gradient-to-r from-candy via-peach to-sunny text-white shadow-candy/40 border-transparent hover:shadow-lg hover:-translate-y-1"
               >
                 Subscribe ✨
               </motion.button>

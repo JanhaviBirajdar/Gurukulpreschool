@@ -2,6 +2,8 @@ import { motion } from 'framer-motion'
 import { useTheme } from '../context/ThemeContext'
 import { staggerContainer, staggerItem } from '../utils/animations'
 import CountUpPkg from 'react-countup'
+import founder from '../../src/assets/artimam.jpeg'
+
 const CountUp = CountUpPkg.default || CountUpPkg
 
 import { Heart, Shield, Star, BookOpen, Users, Trophy, Target, Sparkles, Smile, Sun, GraduationCap, Music, Home, MapPin, Building, Award } from 'lucide-react'
@@ -104,7 +106,7 @@ export default function AboutPage() {
           >
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl card-shadow max-w-sm mx-auto">
               <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
+                src={founder}
                 alt="Founder"
                 className="w-full h-full object-cover"
               />
@@ -259,7 +261,7 @@ export default function AboutPage() {
           </div>
 
           {/* ── Narrative Prose Sections ── */}
-          <div className="mt-20 md:mt-28 space-y-16 md:space-y-20 max-w-[900px] mx-auto relative">
+          <div className="mt-28 md:mt-36 space-y-20 md:space-y-24 max-w-[900px] mx-auto relative">
             {/* Decorative floating blobs */}
             <div className="absolute -top-20 -left-32 w-64 h-64 bg-candy/8 rounded-full filter blur-[80px] pointer-events-none dark:bg-candy/5" />
             <div className="absolute top-1/2 -right-28 w-56 h-56 bg-lavender/8 rounded-full filter blur-[80px] pointer-events-none dark:bg-lavender/5" />
@@ -278,41 +280,37 @@ export default function AboutPage() {
                 borderRadius: '1.5rem',
               }}
             >
-              <div className="flex flex-col md:flex-row gap-6 md:gap-8 p-7 md:p-9 relative overflow-hidden rounded-[1.4rem]"
+              <div className="p-8 md:p-10 text-center relative overflow-hidden rounded-[1.4rem]"
                 style={{
                   background: 'rgba(255,255,255,0.82)',
                   backdropFilter: 'blur(12px)',
                 }}
               >
-                {/* Icon column */}
-                <div className="flex-shrink-0 flex md:flex-col items-center md:items-start gap-4 md:gap-0">
+                {/* Centered Icon */}
+                <div className="flex justify-center mb-6">
                   <motion.div
                     whileHover={{ rotate: 8, scale: 1.08 }}
                     className="w-14 h-14 rounded-xl flex items-center justify-center bg-gradient-to-br from-candy to-candy-light shadow-md"
                   >
                     <GraduationCap className="w-7 h-7 text-white" />
                   </motion.div>
-                  {/* Vertical accent line (desktop) */}
-                  <div className="hidden md:block w-0.5 flex-1 mt-4 rounded-full bg-gradient-to-b from-candy/30 to-transparent" />
                 </div>
 
-                {/* Content column */}
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-xl md:text-2xl font-bold font-heading text-text-primary dark:text-text-primary mb-1.5">
-                    Beyond Books & Alphabets
-                  </h3>
-                  <p className="text-[1.05rem] leading-[1.85] font-body text-text-secondary font-medium max-w-[92%] mb-5">
-                    At Gurukul, education goes beyond books and alphabets. We believe preschool learning is the foundation of a child's overall growth — nurturing <strong className="text-text-primary">holistic development</strong> across every dimension.
-                  </p>
+                {/* Content */}
+                <h3 className="text-2xl md:text-3xl font-bold font-heading text-text-primary dark:text-text-primary mb-4 text-center">
+                  Beyond Books & Alphabets
+                </h3>
+                <p className="text-[1.05rem] leading-[1.85] font-body text-text-secondary font-medium max-w-xl mx-auto mb-6 text-center">
+                  At Gurukul, education goes beyond books and alphabets. We believe preschool learning is the foundation of a child's overall growth — nurturing <strong className="text-text-primary">holistic development</strong> across every dimension.
+                </p>
 
-                  {/* Clean pills */}
-                  <div className="flex flex-wrap gap-2.5">
-                    {['Creativity', 'Communication', 'Confidence', 'Discipline', 'Social Skills', 'Moral Values'].map((item) => (
-                      <span key={item} className="px-4 py-1.5 rounded-full text-xs font-bold font-body bg-white border border-candy/20 text-candy shadow-sm">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+                {/* Clean pills centered */}
+                <div className="flex flex-wrap justify-center gap-2.5">
+                  {['Creativity', 'Communication', 'Confidence', 'Discipline', 'Social Skills', 'Moral Values'].map((item) => (
+                    <span key={item} className="px-4 py-1.5 rounded-full text-xs font-bold font-body bg-white border border-candy/20 text-candy shadow-sm">
+                      {item}
+                    </span>
+                  ))}
                 </div>
 
                 {/* Hover glow */}
@@ -333,40 +331,37 @@ export default function AboutPage() {
                 borderRadius: '1.5rem',
               }}
             >
-              <div className="flex flex-col md:flex-row gap-6 md:gap-8 p-7 md:p-9 relative overflow-hidden rounded-[1.4rem]"
+              <div className="p-8 md:p-10 text-center relative overflow-hidden rounded-[1.4rem]"
                 style={{
                   background: 'rgba(255,255,255,0.82)',
                   backdropFilter: 'blur(12px)',
                 }}
               >
-                {/* Icon column */}
-                <div className="flex-shrink-0 flex md:flex-col items-center md:items-start gap-4 md:gap-0">
+                {/* Centered Icon */}
+                <div className="flex justify-center mb-6">
                   <motion.div
                     whileHover={{ rotate: 8, scale: 1.08 }}
                     className="w-14 h-14 rounded-xl flex items-center justify-center bg-gradient-to-br from-lavender to-lavender-light shadow-md"
                   >
                     <Users className="w-7 h-7 text-white" />
                   </motion.div>
-                  <div className="hidden md:block w-0.5 flex-1 mt-4 rounded-full bg-gradient-to-b from-lavender/30 to-transparent" />
                 </div>
 
-                {/* Content column */}
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-xl md:text-2xl font-bold font-heading text-text-primary dark:text-text-primary mb-1.5">
-                    Parents as Partners
-                  </h3>
-                  <p className="text-[1.05rem] leading-[1.85] font-body text-text-secondary font-medium max-w-[92%] mb-5">
-                    Parents play an important role in a child's learning journey. We regularly conduct parent meetings and special activities, creating joyful memories and cultural connections for families.
-                  </p>
+                {/* Content */}
+                <h3 className="text-2xl md:text-3xl font-bold font-heading text-text-primary dark:text-text-primary mb-4 text-center">
+                  Parents as Partners
+                </h3>
+                <p className="text-[1.05rem] leading-[1.85] font-body text-text-secondary font-medium max-w-xl mx-auto mb-6 text-center">
+                  Parents play an important role in a child's learning journey. We regularly conduct parent meetings and special activities, creating joyful memories and cultural connections for families.
+                </p>
 
-                  {/* Clean pills */}
-                  <div className="flex flex-wrap gap-2.5">
-                    {['Diwali Lamps', 'Rangoli', 'Fireless Cooking', 'Rakhi Making', 'Garba Workshops', 'Navratri'].map((item) => (
-                      <span key={item} className="px-4 py-1.5 rounded-full text-xs font-bold font-body bg-white border border-lavender/20 text-lavender shadow-sm">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+                {/* Clean pills centered */}
+                <div className="flex flex-wrap justify-center gap-2.5">
+                  {['Diwali Lamps', 'Rangoli', 'Fireless Cooking', 'Rakhi Making', 'Garba Workshops', 'Navratri'].map((item) => (
+                    <span key={item} className="px-4 py-1.5 rounded-full text-xs font-bold font-body bg-white border border-lavender/20 text-lavender shadow-sm">
+                      {item}
+                    </span>
+                  ))}
                 </div>
 
                 {/* Hover glow */}

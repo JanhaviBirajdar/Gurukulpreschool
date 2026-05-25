@@ -4,10 +4,10 @@ import { useTheme } from '../../context/ThemeContext'
 
 const botResponses = {
   'programs': 'We offer 4 programs:\n🧸 Play Group (1.5-2.5 yrs)\n🌈 Nursery (2.5-3.5 yrs)\n📚 Junior KG (3.5-4.5 yrs)\n🎓 Senior KG (4.5-5.5 yrs)',
-  'timings': '🕐 School timings: Monday to Saturday, 8:00 AM - 2:00 PM.\nOffice hours: 8:00 AM - 4:00 PM.',
-  'admission': '📋 Admissions are open! Please visit our Contact page or call us at +91 98765 43210 to schedule a visit.',
-  'fees': '💰 Fee details vary by program. Please contact our office at +91 98765 43210 for the latest fee structure.',
-  'location': '📍 We are located at 123 Learning Lane, Education City, India 411001.',
+  'timings': '🕐 School timings: Monday to Saturday, 8:00 AM - 2:00 PM.\nOffice hours: 9:00 AM - 2:00 PM.',
+  'admission': '📋 Admissions are open! Please visit our Contact page or call us at +91 8177918807 to schedule a visit.',
+  'fees': '💰 Fee details vary by program. Please contact our office at +91 8177918807 for the latest fee structure.',
+  'location': '📍 We are located at Anand Nagar, Manohar Nagar, Talegaon Dabhade, Pune 410506',
   'default': "I'm a friendly Gurukul helper! 🌟 Try asking about:\n• Programs\n• Timings\n• Admission\n• Fees\n• Location"
 }
 
@@ -81,7 +81,7 @@ export default function Chatbot() {
                 <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-2xl shadow-sm">🤖</div>
                 <p className="text-white font-bold text-2xl tracking-wide font-heading">Guru Assistant</p>
               </div>
-              <button 
+              <button
                 onClick={() => setIsOpen(false)}
                 className="text-white hover:text-white/80 transition-colors p-2 -mr-2"
               >
@@ -96,7 +96,7 @@ export default function Chatbot() {
               {messages.map((msg, i) => (
                 <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
                   className={`flex ${msg.from === 'user' ? 'justify-end' : 'justify-start'}`}>
-                  
+
                   {msg.from === 'user' ? (
                     <div className="px-6 py-3 text-[15px] leading-relaxed whitespace-pre-line font-body bg-[#6366f1] text-white rounded-full max-w-[80%]">
                       {msg.text}

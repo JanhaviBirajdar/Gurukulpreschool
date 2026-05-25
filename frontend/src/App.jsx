@@ -5,7 +5,6 @@ import Footer from './components/layout/Footer'
 import LoadingScreen from './components/layout/LoadingScreen'
 import WhatsAppButton from './components/special/WhatsAppButton'
 import Chatbot from './components/special/Chatbot'
-import ScrollToTop from './components/special/ScrollToTop'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ProgramsPage from './pages/ProgramsPage'
@@ -35,7 +34,6 @@ export default function App() {
       <Footer />
       <WhatsAppButton />
       <Chatbot />
-      <ScrollToTop />
     </>
   )
 }

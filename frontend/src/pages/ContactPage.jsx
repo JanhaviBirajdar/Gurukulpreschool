@@ -116,10 +116,11 @@ export default function ContactPage() {
 
                 <motion.button
                   type="submit"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   disabled={status === 'loading'}
-                  className="w-full mt-10 py-5 rounded-2xl text-white dark:text-surface-dark font-body text-lg font-bold transition-all disabled:opacity-60 bg-surface-dark dark:bg-white shadow-lg flex items-center justify-center gap-2"
+                  style={{ padding: '16px 36px', fontSize: '18px' }}
+                  className="w-full mt-10 rounded-full font-bold transition-all duration-300 font-body flex items-center justify-center gap-3 shadow-md bg-gradient-to-r from-candy via-peach to-sunny text-white shadow-candy/40 border-transparent hover:shadow-lg hover:-translate-y-1 disabled:opacity-60"
                 >
                   {status === 'loading' ? (
                     <span className="flex items-center gap-2">

@@ -19,9 +19,9 @@ export default function Hero() {
 
       <FloatingObjects />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-12 lg:pr-20 lg:pl-32 xl:pl-40 flex flex-col lg:flex-row items-center gap-8 lg:gap-16 w-full mt-4 lg:mt-0">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 w-full mt-4 lg:mt-0">
         {/* Left: Text Content */}
-        <div className="flex-1 text-center lg:text-left">
+        <div className="w-full lg:w-[48%] xl:w-[45%] text-center lg:text-left pl-4 lg:pl-10">
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -70,7 +70,8 @@ export default function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="text-center px-10 py-5 rounded-2xl text-white font-bold text-lg shadow-lg shadow-candy/30 bg-gradient-to-br from-candy to-candy-light font-heading hover:shadow-candy/50"
+                style={{ padding: '16px 36px', fontSize: '18px' }}
+                className="rounded-full font-bold transition-all duration-300 font-body flex items-center gap-3 shadow-md bg-gradient-to-r from-candy via-peach to-sunny text-white shadow-candy/40 border-transparent hover:shadow-lg hover:-translate-y-1"
               >
                 Explore Programs 🎓
               </motion.button>
@@ -79,7 +80,8 @@ export default function Hero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="text-center px-10 py-5 rounded-2xl font-bold text-lg border-2 border-lavender/50 text-lavender bg-lavender/5 dark:bg-lavender/10 dark:border-lavender/30 dark:text-lavender-light transition-colors font-heading"
+                style={{ padding: '16px 36px', fontSize: '18px' }}
+                className="rounded-full font-bold transition-all duration-300 font-body flex items-center gap-3 shadow-md bg-white dark:bg-surface-dark text-text-secondary dark:text-text-secondary-dark hover:shadow-lg hover:-translate-y-1 hover:text-candy border border-black/5 dark:border-white/5"
               >
                 Contact Us 💌
               </motion.button>
@@ -115,7 +117,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="flex-1 w-full max-w-lg lg:max-w-xl h-[350px] md:h-[450px]"
+          className="w-full lg:w-[52%] xl:w-[55%] h-[320px] md:h-[420px] flex justify-center"
         >
           <HeroScene />
         </motion.div>

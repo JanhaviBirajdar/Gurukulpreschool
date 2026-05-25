@@ -4,15 +4,15 @@ import { staggerContainer, staggerItem } from '../utils/animations'
 import CountUpPkg from 'react-countup'
 const CountUp = CountUpPkg.default || CountUpPkg
 
-import { Heart, Shield, Star, BookOpen, Users, Trophy, Target, Sparkles, Smile, Sun } from 'lucide-react'
+import { Heart, Shield, Star, BookOpen, Users, Trophy, Target, Sparkles, Smile, Sun, GraduationCap, Music, Home, MapPin, Building, Award } from 'lucide-react'
 
 const milestones = [
-  { year: '2019', title: 'The Beginning', desc: 'Gurukul Pre School opened its doors with a vision of joyful learning.', icon: <Star className="w-6 h-6" /> },
-  { year: '2020', title: 'First Expansion', desc: 'Added Junior KG and Senior KG programs due to growing demand.', icon: <Users className="w-6 h-6" /> },
-  { year: '2020', title: 'Modern Campus', desc: 'Moved to a purpose-built campus with state-of-the-art facilities.', icon: <Target className="w-6 h-6" /> },
-  { year: '2020', title: 'Digital Learning', desc: 'Pioneered online learning for preschoolers during challenging times.', icon: <BookOpen className="w-6 h-6" /> },
-  { year: '2020', title: '500+ Students', desc: 'Reached a milestone of nurturing 500+ happy little learners.', icon: <Smile className="w-6 h-6" /> },
-  { year: '2026', title: 'Award Winning', desc: 'Recognized as the best preschool in the region for excellence.', icon: <Trophy className="w-6 h-6" /> },
+  { year: '2019', title: 'The Beginning', desc: 'Gurukul Pre-School began with a vision to provide quality preschool education blended with strong values and संस्कार (Sanskar).', icon: <Star className="w-6 h-6" /> },
+  { year: '2020', title: 'Online Learning During COVID', desc: 'During the pandemic lockdown, we successfully conducted online classes for 100+ students across Talegaon and Vadgaon, from Nursery to Senior KG.', icon: <BookOpen className="w-6 h-6" /> },
+  { year: '2021', title: 'Anand Nagar Campus', desc: 'As normalcy returned, physical classes started at our first center in Anand Nagar. The response from parents was overwhelming, and our strength crossed 150+ students.', icon: <Home className="w-6 h-6" /> },
+  { year: '2021', title: 'Grand Annual Gathering', desc: 'Launched our first Annual Gathering celebration — a tradition of creativity, confidence, and unforgettable memories that continues every year since.', icon: <Music className="w-6 h-6" /> },
+  { year: '2022', title: 'Vatan Nagar Expansion', desc: 'Shifted to a larger campus at Vatan Nagar to accommodate growing admissions, successfully enrolling nearly 200 students.', icon: <MapPin className="w-6 h-6" /> },
+  { year: '2024', title: '400+ Capacity Campus', desc: 'Moved back to a bigger, better campus in Anand Nagar with 9 spacious classrooms, an activity area, an in-school stage, and access to Goni Dandekar Garden.', icon: <Building className="w-6 h-6" /> },
 ]
 
 const values = [
@@ -212,10 +212,18 @@ export default function AboutPage() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-extrabold text-center mb-20 font-heading text-text-primary dark:text-text-primary-dark"
+            className="text-3xl md:text-5xl font-extrabold text-center mb-8 font-heading text-text-primary dark:text-text-primary-dark"
           >
             Our <span className="gradient-text">Journey</span> 🚀
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center text-lg md:text-xl max-w-3xl mx-auto font-body text-text-secondary dark:text-text-secondary-dark font-medium leading-relaxed mb-20"
+          >
+            The journey of Gurukul Pre-School began in 2019 with a vision to provide quality preschool education blended with strong values and संस्कार (Sanskar).
+          </motion.p>
 
           <div className="relative">
             {/* Center Line */}
@@ -223,7 +231,7 @@ export default function AboutPage() {
 
             {milestones.map((milestone, i) => (
               <motion.div
-                key={milestone.year}
+                key={milestone.title}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-100px' }}
@@ -248,6 +256,180 @@ export default function AboutPage() {
                 <div className="flex-1" />
               </motion.div>
             ))}
+          </div>
+
+          {/* ── Narrative Prose Sections ── */}
+          <div className="mt-20 md:mt-28 space-y-16 md:space-y-20 max-w-[900px] mx-auto relative">
+            {/* Decorative floating blobs */}
+            <div className="absolute -top-20 -left-32 w-64 h-64 bg-candy/8 rounded-full filter blur-[80px] pointer-events-none dark:bg-candy/5" />
+            <div className="absolute top-1/2 -right-28 w-56 h-56 bg-lavender/8 rounded-full filter blur-[80px] pointer-events-none dark:bg-lavender/5" />
+            <div className="absolute -bottom-16 left-1/4 w-48 h-48 bg-sky/8 rounded-full filter blur-[60px] pointer-events-none dark:bg-sky/5" />
+
+            {/* ── Card 1: Beyond Books ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5 }}
+              className="narrative-card group"
+              style={{
+                background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #FF6B9D, #A78BFA) border-box',
+                border: '2px solid transparent',
+                borderRadius: '1.5rem',
+              }}
+            >
+              <div className="flex flex-col md:flex-row gap-6 md:gap-8 p-7 md:p-9 relative overflow-hidden rounded-[1.4rem]"
+                style={{
+                  background: 'rgba(255,255,255,0.82)',
+                  backdropFilter: 'blur(12px)',
+                }}
+              >
+                {/* Icon column */}
+                <div className="flex-shrink-0 flex md:flex-col items-center md:items-start gap-4 md:gap-0">
+                  <motion.div
+                    whileHover={{ rotate: 8, scale: 1.08 }}
+                    className="w-14 h-14 rounded-xl flex items-center justify-center bg-gradient-to-br from-candy to-candy-light shadow-md"
+                  >
+                    <GraduationCap className="w-7 h-7 text-white" />
+                  </motion.div>
+                  {/* Vertical accent line (desktop) */}
+                  <div className="hidden md:block w-0.5 flex-1 mt-4 rounded-full bg-gradient-to-b from-candy/30 to-transparent" />
+                </div>
+
+                {/* Content column */}
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-xl md:text-2xl font-bold font-heading text-text-primary dark:text-text-primary mb-1.5">
+                    Beyond Books & Alphabets
+                  </h3>
+                  <p className="text-[1.05rem] leading-[1.85] font-body text-text-secondary font-medium max-w-[92%] mb-5">
+                    At Gurukul, education goes beyond books and alphabets. We believe preschool learning is the foundation of a child's overall growth — nurturing <strong className="text-text-primary">holistic development</strong> across every dimension.
+                  </p>
+
+                  {/* Clean pills */}
+                  <div className="flex flex-wrap gap-2.5">
+                    {['Creativity', 'Communication', 'Confidence', 'Discipline', 'Social Skills', 'Moral Values'].map((item) => (
+                      <span key={item} className="px-4 py-1.5 rounded-full text-xs font-bold font-body bg-white border border-candy/20 text-candy shadow-sm">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Hover glow */}
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-candy/6 rounded-full filter blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              </div>
+            </motion.div>
+
+            {/* ── Card 2: Parents as Partners ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5, delay: 0.08 }}
+              className="narrative-card group"
+              style={{
+                background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #A78BFA, #87CEEB) border-box',
+                border: '2px solid transparent',
+                borderRadius: '1.5rem',
+              }}
+            >
+              <div className="flex flex-col md:flex-row gap-6 md:gap-8 p-7 md:p-9 relative overflow-hidden rounded-[1.4rem]"
+                style={{
+                  background: 'rgba(255,255,255,0.82)',
+                  backdropFilter: 'blur(12px)',
+                }}
+              >
+                {/* Icon column */}
+                <div className="flex-shrink-0 flex md:flex-col items-center md:items-start gap-4 md:gap-0">
+                  <motion.div
+                    whileHover={{ rotate: 8, scale: 1.08 }}
+                    className="w-14 h-14 rounded-xl flex items-center justify-center bg-gradient-to-br from-lavender to-lavender-light shadow-md"
+                  >
+                    <Users className="w-7 h-7 text-white" />
+                  </motion.div>
+                  <div className="hidden md:block w-0.5 flex-1 mt-4 rounded-full bg-gradient-to-b from-lavender/30 to-transparent" />
+                </div>
+
+                {/* Content column */}
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-xl md:text-2xl font-bold font-heading text-text-primary dark:text-text-primary mb-1.5">
+                    Parents as Partners
+                  </h3>
+                  <p className="text-[1.05rem] leading-[1.85] font-body text-text-secondary font-medium max-w-[92%] mb-5">
+                    Parents play an important role in a child's learning journey. We regularly conduct parent meetings and special activities, creating joyful memories and cultural connections for families.
+                  </p>
+
+                  {/* Clean pills */}
+                  <div className="flex flex-wrap gap-2.5">
+                    {['Diwali Lamps', 'Rangoli', 'Fireless Cooking', 'Rakhi Making', 'Garba Workshops', 'Navratri'].map((item) => (
+                      <span key={item} className="px-4 py-1.5 rounded-full text-xs font-bold font-body bg-white border border-lavender/20 text-lavender shadow-sm">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Hover glow */}
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-lavender/6 rounded-full filter blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              </div>
+            </motion.div>
+
+            {/* ── Card 3: Motto ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+              className="narrative-card group"
+              style={{
+                background: 'linear-gradient(white, white) padding-box, linear-gradient(135deg, #FF6B9D, #A78BFA, #87CEEB) border-box',
+                border: '2px solid transparent',
+                borderRadius: '1.5rem',
+              }}
+            >
+              <div className="p-8 md:p-10 text-center relative overflow-hidden rounded-[1.4rem]"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(255,245,247,0.9), rgba(240,230,255,0.9), rgba(230,247,255,0.9))',
+                  backdropFilter: 'blur(12px)',
+                }}
+              >
+                {/* Small icon */}
+                <div className="flex justify-center mb-4">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br from-candy via-lavender to-sky shadow-md">
+                    <Heart className="w-6 h-6 text-white" />
+                  </div>
+                </div>
+
+                <span className="inline-block px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest font-body bg-white/70 border border-candy/15 text-text-secondary mb-5 shadow-sm">
+                  Our Motto
+                </span>
+
+                {/* Gradient heading — controlled size */}
+                <p className="font-heading font-extrabold leading-tight mb-5" style={{
+                  fontSize: 'clamp(2rem, 4.5vw, 3.5rem)',
+                  background: 'linear-gradient(135deg, #FF6B9D, #A78BFA, #87CEEB)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}>
+                  "Education with Sanskar."
+                </p>
+
+                {/* Divider */}
+                <div className="flex items-center justify-center gap-3 mb-5">
+                  <div className="h-px w-10 bg-gradient-to-r from-transparent to-candy/30" />
+                  <Star className="w-3.5 h-3.5 text-candy/40" />
+                  <div className="h-px w-10 bg-gradient-to-l from-transparent to-candy/30" />
+                </div>
+
+                <p className="text-[1.05rem] leading-[1.85] font-body text-text-secondary font-medium max-w-xl mx-auto">
+                  Our aim is to create confident, happy, disciplined, and morally strong children who are ready not only for school but also for life. Gurukul Pre-School stands as a growing family built on trust, love, learning, and values.
+                </p>
+
+                {/* Hover glow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-candy/4 via-transparent to-sky/4 opacity-0 group-hover:opacity-100 transition-opacity duration-600 pointer-events-none rounded-[1.4rem]" />
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

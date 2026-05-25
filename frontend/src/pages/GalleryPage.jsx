@@ -9,22 +9,42 @@ import { Camera, PlayCircle, Image as ImageIcon } from 'lucide-react'
 
 const categories = ['All', 'Classrooms', 'Activities', 'Events', 'Celebrations']
 
+// Dynamically import all images from each category folder
+const activityImages = import.meta.glob('../assets/a/*.jpeg', { eager: true, import: 'default' })
+const celebrationImages = import.meta.glob('../assets/cb/*.jpeg', { eager: true, import: 'default' })
+const classroomImages = import.meta.glob('../assets/cl/*.jpeg', { eager: true, import: 'default' })
+const eventImages = import.meta.glob('../assets/e/*.jpeg', { eager: true, import: 'default' })
+
+// Helper to extract a numeric sort key from filenames like "a (1).jpeg"
+const extractNumber = (path) => {
+  const match = path.match(/\((\d+)\)/)
+  return match ? parseInt(match[1], 10) : 0
+}
+
+// Helper to build gallery items from a glob result
+const buildItems = (globResult, category, prefix) => {
+  return Object.entries(globResult)
+    .sort(([a], [b]) => extractNumber(a) - extractNumber(b))
+    .map(([path, src], index) => ({
+      id: `${prefix}-${index}`,
+      src,
+      category,
+      title: `${category} ${index + 1}`,
+      type: 'image',
+    }))
+}
+
 const galleryItems = [
-  { id: 1, src: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&auto=format&fit=crop', category: 'Activities', title: 'Art & Craft Time', type: 'image' },
-  { id: 2, src: 'https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=800&auto=format&fit=crop', category: 'Classrooms', title: 'Colorful Classroom', type: 'image' },
-  { id: 3, src: 'https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=800&auto=format&fit=crop', category: 'Events', title: 'Annual Day', type: 'image' },
-  { id: 4, src: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=800&auto=format&fit=crop', category: 'Activities', title: 'Story Time', type: 'image' },
-  { id: 5, src: 'https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=800&auto=format&fit=crop', category: 'Celebrations', title: 'Birthday Fun', type: 'image' },
-  { id: 6, src: 'https://images.unsplash.com/photo-1529390079861-591de354faf5?w=800&auto=format&fit=crop', category: 'Classrooms', title: 'Learning Space', type: 'image' },
-  { id: 7, src: 'https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&auto=format&fit=crop', category: 'Events', title: 'Sports Day', type: 'image' },
-  { id: 8, src: 'https://images.unsplash.com/photo-1571210862729-78a33e9ed6a3?w=800&auto=format&fit=crop', category: 'Celebrations', title: 'Festival Joy', type: 'image' },
-  { id: 9, src: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop', category: 'Activities', title: 'Outdoor Play', type: 'image' },
+  ...buildItems(activityImages, 'Activities', 'a'),
+  ...buildItems(celebrationImages, 'Celebrations', 'cb'),
+  ...buildItems(classroomImages, 'Classrooms', 'cl'),
+  ...buildItems(eventImages, 'Events', 'e'),
 ]
 /*
 const videos = [
-{ id: 1, thumbnail: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&auto=format&fit=crop', title: 'Annual Function 2023', duration: '3:45' },
-{ id: 2, thumbnail: 'https://images.unsplash.com/photo-1587654780291-39c9404d7dd0?w=800&auto=format&fit=crop', title: 'A Day in Nursery', duration: '2:10' },
-{ id: 3, thumbnail: 'https://images.unsplash.com/photo-1511629091441-ee46146481b6?w=800&auto=format&fit=crop', title: 'Parent Interactions', duration: '4:20' },
+{ id: 1, thumbnail: '', title: 'Annual Function 2023', duration: '3:45' },
+{ id: 2, thumbnail: '', title: 'A Day in Nursery', duration: '2:10' },
+{ id: 3, thumbnail: '', title: 'Parent Interactions', duration: '4:20' },
 ] 
 */
 

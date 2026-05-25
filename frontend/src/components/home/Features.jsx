@@ -63,7 +63,7 @@ export default function Features() {
       <div className="absolute top-40 left-0 w-96 h-96 bg-candy/10 dark:bg-candy/5 rounded-full mix-blend-multiply dark:mix-blend-lighten blur-3xl" />
       <div className="absolute bottom-40 right-0 w-96 h-96 bg-mint/10 dark:bg-mint/5 rounded-full mix-blend-multiply dark:mix-blend-lighten blur-3xl" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10 px-6 sm:px-10 lg:px-16">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

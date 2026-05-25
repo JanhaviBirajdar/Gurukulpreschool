@@ -170,17 +170,23 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Section Padding ===== */
 .section-padding {
-  padding: 5rem 1.5rem;
+  padding: 5rem 2rem;
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding: 6rem 2rem;
+    padding: 6rem 3rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section-padding {
-    padding: 8rem 4rem;
+    padding: 8rem 6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-padding {
+    padding: 8rem 8rem;
   }
 }

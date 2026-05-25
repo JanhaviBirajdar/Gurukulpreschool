@@ -67,24 +67,24 @@ export default function ContactPage() {
       </div>
 
       <section className="section-padding">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
 
           {/* Form */}
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="lg:col-span-2">
-            <form onSubmit={handleSubmit} className="p-8 md:p-12 rounded-[2.5rem] relative overflow-hidden bg-gradient-to-br from-candy/30 via-lavender/30 to-mint/30 dark:from-candy/10 dark:via-lavender/10 dark:to-mint/10 border border-white/40 dark:border-white/10 shadow-xl backdrop-blur-3xl">
+            <form onSubmit={handleSubmit} className="p-10 md:p-14 lg:p-16 rounded-[2.5rem] relative overflow-hidden bg-gradient-to-br from-candy/30 via-lavender/30 to-mint/30 dark:from-candy/10 dark:via-lavender/10 dark:to-mint/10 border border-white/40 dark:border-white/10 shadow-xl backdrop-blur-3xl">
 
-              <h3 className="text-3xl font-bold mb-10 font-heading text-text-primary dark:text-text-primary-dark relative z-10 text-center uppercase tracking-widest">
+              <h3 className="text-3xl font-bold mb-12 font-heading text-text-primary dark:text-text-primary-dark relative z-10 text-center uppercase tracking-widest">
                 Contact Us
               </h3>
 
-              <div className="space-y-6 relative z-10">
+              <div className="space-y-8 relative z-10">
                 {[
                   { field: 'name', label: 'Name', type: 'text' },
                   { field: 'phone', label: 'Phone', type: 'text' },
                   { field: 'email', label: 'E-mail', type: 'email' },
                 ].map(({ field, label, type }) => (
                   <div key={field} className="flex flex-col">
-                    <label htmlFor={field} className="text-base font-medium text-text-primary dark:text-text-primary-dark mb-2">
+                    <label htmlFor={field} className="text-base font-semibold text-text-primary dark:text-text-primary-dark mb-3">
                       {label}
                     </label>
                     <input
@@ -92,24 +92,24 @@ export default function ContactPage() {
                       id={field}
                       value={form[field]}
                       onChange={e => { setForm({ ...form, [field]: e.target.value }); setErrors({ ...errors, [field]: '' }) }}
-                      className={`w-full px-4 py-3.5 text-lg text-text-primary dark:text-text-primary-dark bg-white/20 dark:bg-white/5 border ${errors[field] ? 'border-candy' : 'border-white/60 dark:border-white/20 focus:border-text-primary dark:focus:border-white/60'
-                        } rounded-xl outline-none transition-all duration-300 font-body backdrop-blur-md`}
+                      className={`w-full px-5 py-4.5 text-lg text-text-primary dark:text-text-primary-dark bg-white/20 dark:bg-white/5 border ${errors[field] ? 'border-candy' : 'border-white/60 dark:border-white/20 focus:border-text-primary dark:focus:border-white/60'
+                        } rounded-2xl outline-none transition-all duration-300 font-body backdrop-blur-md`}
                     />
                     {errors[field] && <p className="text-xs mt-1.5 text-candy font-bold flex items-center gap-1"><AlertCircle className="w-3 h-3" /> {errors[field]}</p>}
                   </div>
                 ))}
 
                 <div className="flex flex-col pt-2">
-                  <label htmlFor="message" className="text-base font-medium text-text-primary dark:text-text-primary-dark mb-2">
+                  <label htmlFor="message" className="text-base font-semibold text-text-primary dark:text-text-primary-dark mb-3">
                     Message
                   </label>
                   <textarea
                     id="message"
-                    rows={4}
+                    rows={5}
                     value={form.message}
                     onChange={e => { setForm({ ...form, message: e.target.value }); setErrors({ ...errors, message: '' }) }}
-                    className={`w-full px-4 py-3.5 text-lg text-text-primary dark:text-text-primary-dark bg-white/20 dark:bg-white/5 border ${errors.message ? 'border-candy' : 'border-white/60 dark:border-white/20 focus:border-text-primary dark:focus:border-white/60'
-                      } rounded-xl outline-none transition-all duration-300 font-body backdrop-blur-md resize-none`}
+                    className={`w-full px-5 py-4.5 text-lg text-text-primary dark:text-text-primary-dark bg-white/20 dark:bg-white/5 border ${errors.message ? 'border-candy' : 'border-white/60 dark:border-white/20 focus:border-text-primary dark:focus:border-white/60'
+                      } rounded-2xl outline-none transition-all duration-300 font-body backdrop-blur-md resize-none`}
                   />
                   {errors.message && <p className="text-xs mt-1.5 text-candy font-bold flex items-center gap-1"><AlertCircle className="w-3 h-3" /> {errors.message}</p>}
                 </div>
@@ -119,7 +119,7 @@ export default function ContactPage() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   disabled={status === 'loading'}
-                  className="w-full mt-8 py-4 rounded-xl text-white dark:text-surface-dark font-body text-lg transition-all disabled:opacity-60 bg-surface-dark dark:bg-white shadow-lg flex items-center justify-center gap-2"
+                  className="w-full mt-10 py-5 rounded-2xl text-white dark:text-surface-dark font-body text-lg font-bold transition-all disabled:opacity-60 bg-surface-dark dark:bg-white shadow-lg flex items-center justify-center gap-2"
                 >
                   {status === 'loading' ? (
                     <span className="flex items-center gap-2">

@@ -60,7 +60,7 @@ export default function TestimonialsPage() {
 
       {/* Trust Statistics */}
       <section className="py-16 relative z-10">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="glass p-10 rounded-[2.5rem] border border-white/40 dark:border-white/10 shadow-xl hover:-translate-y-2 transition-transform duration-300">
               <div className="text-5xl font-extrabold font-heading text-candy mb-3 drop-shadow-md">
@@ -121,12 +121,12 @@ export default function TestimonialsPage() {
 
       {/* All Reviews Grid */}
       <section className="section-padding bg-lavender/5 dark:bg-surface-dark relative">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center mb-16">
             <h2 className="text-center text-4xl md:text-5xl font-extrabold font-heading text-text-primary dark:text-text-primary-dark">More Love from <span className="gradient-text">Parents</span> ❤️</h2>
           </div>
           <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
             {testimonials.map((t, i) => (
               <motion.div key={i} variants={staggerItem} whileHover={{ y: -8 }}
                 className="p-10 md:p-12 rounded-[2.5rem] glass dark:!bg-surface-dark/90 border border-white/40 dark:border-white/10 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between group">

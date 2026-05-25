@@ -95,7 +95,7 @@ export default function AboutPage() {
 
       {/* Founder Section */}
       <section className="section-padding relative">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-20">
+        <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 flex flex-col md:flex-row items-center gap-12 md:gap-20">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -145,7 +145,7 @@ export default function AboutPage() {
         {/* Decorative Blur Elements */}
         <div className="absolute top-40 right-0 w-96 h-96 bg-lavender/10 dark:bg-lavender/5 rounded-full mix-blend-multiply dark:mix-blend-lighten blur-3xl z-0" />
 
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10 px-6 sm:px-10 lg:px-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -207,7 +207,7 @@ export default function AboutPage() {
       {/* Timeline Journey */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-lavender/5 to-transparent dark:via-surface-dark/50 z-0" />
-        <div className="max-w-5xl mx-auto relative z-10">
+        <div className="max-w-5xl mx-auto relative z-10 px-6 sm:px-10 lg:px-16">
           <motion.h2
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -257,7 +257,7 @@ export default function AboutPage() {
         {/* Subtle background blob */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-3xl bg-candy/5 dark:bg-candy/10 rounded-full filter blur-3xl opacity-50 z-0" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
             {stats.map((stat, i) => (
               <motion.div

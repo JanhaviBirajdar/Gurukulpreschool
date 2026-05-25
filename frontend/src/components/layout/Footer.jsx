@@ -47,7 +47,7 @@ export default function Footer() {
         </svg>
       </div>
 
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 pt-24 pb-12">
+      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:pr-20 lg:pl-32 xl:pl-40 pt-24 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16">
           {/* Logo & About */}
           <div className="lg:col-span-1 flex flex-col">

@@ -74,7 +74,7 @@ export default function GalleryPage() {
 
       {/* Masonry Gallery */}
       <section className="section-padding pb-20 relative">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           {/* Filters */}
           <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-16">
             {categories.map(cat => (

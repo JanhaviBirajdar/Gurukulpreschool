@@ -115,7 +115,7 @@ export default function ProgramsPage() {
       {/* Program Cards */}
       <section className="section-padding relative">
         <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}
-          className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+          className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {programs.map((p) => (
             <motion.div key={p.name} variants={staggerItem} whileHover={{ y: -10 }}
               className={`rounded-3xl overflow-hidden glass dark:!bg-surface-dark group cursor-pointer border-2 border-transparent transition-all duration-500 shadow-lg ${p.hoverShadow} ${p.borderClass} flex flex-col md:flex-row`}>
@@ -173,7 +173,7 @@ export default function ProgramsPage() {
 
       {/* Curriculum Highlights */}
       <section className="section-padding bg-white dark:bg-surface-dark/50 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10 px-6 sm:px-10 lg:px-16">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-text-primary dark:text-text-primary-dark mb-4">
               Curriculum <span className="gradient-text">Highlights</span>
@@ -209,7 +209,7 @@ export default function ProgramsPage() {
 
       {/* Daily Routine Timeline */}
       <section className="section-padding relative">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-text-primary dark:text-text-primary-dark mb-4">
               A Day at <span className="gradient-text">Gurukul</span> ⏰

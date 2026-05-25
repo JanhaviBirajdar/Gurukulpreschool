@@ -104,13 +104,26 @@ export default function GalleryPage() {
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setActive(cat)}
                 style={{ padding: '16px 36px', fontSize: '18px' }}
-                className={`rounded-full font-bold transition-all duration-300 font-body flex items-center gap-3 shadow-md ${active === cat
-                  ? 'bg-gradient-to-r from-candy via-peach to-sunny text-white shadow-candy/40 border-transparent hover:shadow-lg hover:-translate-y-1'
-                  : 'bg-white dark:bg-surface-dark text-text-secondary dark:text-text-secondary-dark hover:shadow-lg hover:-translate-y-1 hover:text-candy border border-black/5 dark:border-white/5'
-                  }`}
+                className={`relative rounded-full font-bold font-body flex items-center gap-3 shadow-md border border-black/5 dark:border-white/5 bg-white dark:bg-surface-dark transition-colors duration-300 ${
+                  active === cat 
+                    ? 'text-white' 
+                    : 'text-text-secondary dark:text-text-secondary-dark hover:text-candy'
+                }`}
               >
-                {cat === 'All' && <ImageIcon className="w-5 h-5" />}
-                {cat}
+                {/* Sliding background pill */}
+                {active === cat && (
+                  <motion.div
+                    layoutId="activeCategoryPill"
+                    className="absolute inset-0 rounded-full bg-gradient-to-r from-candy via-peach to-sunny shadow-lg shadow-candy/40"
+                    transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+                    style={{ zIndex: 0 }}
+                  />
+                )}
+                {/* Content */}
+                <span className="relative z-10 flex items-center gap-3">
+                  {cat === 'All' && <ImageIcon className="w-5 h-5" />}
+                  {cat}
+                </span>
               </motion.button>
             ))}
           </div>
@@ -127,13 +140,20 @@ export default function GalleryPage() {
                   <motion.div
                     key={item.id}
                     layout
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.4, delay: i * 0.05 }}
+                    initial={{ opacity: 0, y: 40, scale: 0.96 }}
+                    whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                    viewport={{ once: true, margin: '-60px' }}
+                    whileHover={{ y: -8, scale: 1.02 }}
+                    transition={{ 
+                      type: 'spring', 
+                      stiffness: 120, 
+                      damping: 18, 
+                      delay: Math.min(i % 8, 4) * 0.05 
+                    }}
                     onClick={() => setIndex(i)}
                     style={{ marginBottom: '24px' }}
-                    className="rounded-3xl overflow-hidden cursor-pointer group relative shadow-md hover:shadow-2xl transition-all duration-500 border border-black/5 dark:border-white/5"
+                    className="rounded-3xl overflow-hidden cursor-pointer group relative shadow-md hover:shadow-2xl transition-all duration-500 border border-black/5 dark:border-white/5 bg-white dark:bg-surface-dark"
                   >
                     <img
                       src={item.src}

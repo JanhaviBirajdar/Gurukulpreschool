@@ -19,9 +19,9 @@ export default function Hero() {
 
       <FloatingObjects />
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-16 xl:px-24 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 w-full mt-4 lg:mt-0">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col lg:flex-row items-center w-full mt-4 lg:mt-0">
         {/* Left: Text Content */}
-        <div className="w-full lg:w-[48%] xl:w-[45%] text-center lg:text-left pl-4 lg:pl-10">
+        <div className="w-full lg:w-[45%] text-center lg:text-left pl-6 lg:pl-16 xl:pl-24">
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -54,7 +54,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="text-center text-xl md:text-2xl max-w-xl mx-auto lg:mx-0 mb-8 font-body font-medium leading-relaxed text-text-secondary dark:text-text-secondary-dark"
+            className="text-lg md:text-xl lg:text-2xl max-w-xl mx-auto lg:mx-0 lg:text-left mb-8 font-body font-medium leading-relaxed text-text-secondary dark:text-text-secondary-dark"
           >
             Where little minds bloom with joy and wonder. A magical place of
             creative learning, warm friendships, and endless discoveries. 🌈
@@ -117,7 +117,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="w-full lg:w-[52%] xl:w-[55%] h-[320px] md:h-[420px] flex justify-center"
+          className="w-full lg:w-[58%] h-[320px] md:h-[420px]"
         >
           <HeroScene />
         </motion.div>

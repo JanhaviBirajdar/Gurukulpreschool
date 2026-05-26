@@ -2,14 +2,14 @@ import { motion } from 'framer-motion'
 import { Sparkles } from 'lucide-react'
 
 const galleryImages = [
-  { src: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=600&auto=format&fit=crop', alt: 'Creative painting' },
-  { src: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=600&auto=format&fit=crop', alt: 'Building block creations' },
-  { src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=600&auto=format&fit=crop', alt: 'Curious reading' },
-  { src: 'https://images.unsplash.com/photo-1540479859555-17af45c78602?q=80&w=600&auto=format&fit=crop', alt: 'Group storytelling' },
-  { src: 'https://images.unsplash.com/photo-1530026405186-ed1ea0ac7a63?q=80&w=600&auto=format&fit=crop', alt: 'Hands-on discovery' },
-  { src: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=600&auto=format&fit=crop', alt: 'Pure childhood laughter' },
-  { src: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=600&auto=format&fit=crop', alt: 'Outdoor active play' },
-  { src: 'https://images.unsplash.com/photo-1472162072942-cd5147eb3902?q=80&w=600&auto=format&fit=crop', alt: 'Early blackboard lessons' }
+  { src: '', alt: 'Creative painting' },
+  { src: '', alt: 'Building block creations' },
+  { src: '', alt: 'Curious reading' },
+  { src: '', alt: 'Group storytelling' },
+  { src: '', alt: 'Hands-on discovery' },
+  { src: '', alt: 'Pure childhood laughter' },
+  { src: '', alt: 'Outdoor active play' },
+  { src: '', alt: 'Early blackboard lessons' }
 ]
 
 export default function ScrollingGallery() {
@@ -17,7 +17,7 @@ export default function ScrollingGallery() {
   const duplicatedImages = [...galleryImages, ...galleryImages, ...galleryImages]
 
   return (
-    <section className="py-24 overflow-hidden bg-white/30 dark:bg-transparent relative">
+    <section className="pt-24 pb-64 md:pt-32 md:pb-48 overflow-hidden bg-white/30 dark:bg-transparent relative">
       {/* Decorative Blob */}
       <div className="absolute top-1/2 -left-32 w-80 h-80 rounded-full opacity-10 blur-[90px] bg-mint pointer-events-none" />
 
@@ -72,7 +72,8 @@ export default function ScrollingGallery() {
       </div>
 
       {/* Tailwind marquee animation injected as inline style to make sure it works seamlessly */}
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes marquee {
           0% { transform: translateX(0); }
           100% { transform: translateX(calc(-33.333% - 16px)); }

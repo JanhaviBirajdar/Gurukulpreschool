@@ -8,46 +8,46 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 
 const reviews = [
-  { 
-    name: 'Aarti Mehta', 
-    child: 'Mother of Aarav (Nursery)', 
-    text: 'My son absolutely loves going to Gurukul! The teachers are so caring and the activities are wonderful. He has grown so much in confidence and social skills.', 
+  {
+    name: 'Aarti Mehta',
+    child: 'Mother of Aarav (Nursery)',
+    text: 'My son absolutely loves going to Gurukul! The teachers are so caring and the activities are wonderful. He has grown so much in confidence and social skills.',
     rating: 5,
     bgColor: 'bg-candy/5 dark:bg-candy/2',
     borderColor: 'border-candy/20',
     initialColor: 'bg-candy text-white'
   },
-  { 
-    name: 'Rajesh Kumar', 
-    child: 'Father of Priya (Junior KG)', 
-    text: 'The best preschool experience we could have asked for. The curriculum is perfectly balanced between structured learning and playful discovery. Highly recommended!', 
+  {
+    name: 'Rajesh Kumar',
+    child: 'Father of Priya (Junior KG)',
+    text: 'The best preschool experience we could have asked for. The curriculum is perfectly balanced between structured learning and playful discovery. Highly recommended!',
     rating: 5,
     bgColor: 'bg-mint/5 dark:bg-mint/2',
     borderColor: 'border-mint/20',
     initialColor: 'bg-mint text-white'
   },
-  { 
-    name: 'Sneha Patel', 
-    child: 'Mother of Rohan (Play Group)', 
-    text: 'Gurukul has been a second home for our son. The safe, CCTV monitored environment and creative approach to learning make it stand out from any other preschool.', 
+  {
+    name: 'Sneha Patel',
+    child: 'Mother of Rohan (Play Group)',
+    text: 'Gurukul has been a second home for our son. The safe, CCTV monitored environment and creative approach to learning make it stand out from any other preschool.',
     rating: 5,
     bgColor: 'bg-lavender/5 dark:bg-lavender/2',
     borderColor: 'border-lavender/20',
     initialColor: 'bg-lavender text-white'
   },
-  { 
-    name: 'Vikram Singh', 
-    child: 'Father of Ananya (Senior KG)', 
-    text: 'We are so impressed with the personalized focus. The phonics program and arts are exceptional. Our daughter is perfectly ready for primary school now.', 
+  {
+    name: 'Vikram Singh',
+    child: 'Father of Ananya (Senior KG)',
+    text: 'We are so impressed with the personalized focus. The phonics program and arts are exceptional. Our daughter is perfectly ready for primary school now.',
     rating: 5,
     bgColor: 'bg-sky/5 dark:bg-sky/2',
     borderColor: 'border-sky/20',
     initialColor: 'bg-sky text-white'
   },
-  { 
-    name: 'Priya Reddy', 
-    child: 'Mother of Twins (Nursery)', 
-    text: 'The teachers truly care about each child’s unique pace. My twins have flourished here with the individual attention and loving environment. Thank you, Gurukul!', 
+  {
+    name: 'Priya Reddy',
+    child: 'Mother of Twins (Nursery)',
+    text: 'The teachers truly care about each child’s unique pace. My twins have flourished here with the individual attention and loving environment. Thank you, Gurukul!',
     rating: 5,
     bgColor: 'bg-sunny/5 dark:bg-sunny/2',
     borderColor: 'border-sunny/20',
@@ -57,12 +57,12 @@ const reviews = [
 
 export default function ParentReviews() {
   return (
-    <section className="py-24 md:py-32 overflow-hidden bg-gradient-to-b from-transparent via-sky/5 to-transparent dark:via-sky/2 relative">
+    <section className="pt-44 pb-48 md:pt-32 md:pb-60 overflow-hidden bg-gradient-to-b from-transparent via-sky/5 to-transparent dark:via-sky/2 relative">
       {/* Decorative Blob */}
       <div className="absolute top-1/2 right-0 w-80 h-80 bg-lavender/10 dark:bg-lavender/5 rounded-full filter blur-[100px] pointer-events-none" />
-      
+
       <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
-        
+
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
           <motion.div

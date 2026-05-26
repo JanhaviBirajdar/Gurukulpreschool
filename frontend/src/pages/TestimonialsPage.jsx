@@ -76,7 +76,7 @@ export default function TestimonialsPage() {
             </div>
             <div className="glass p-10 rounded-[2.5rem] border border-white/40 dark:border-white/10 shadow-xl hover:-translate-y-2 transition-transform duration-300">
               <div className="text-5xl font-extrabold font-heading text-lavender mb-3 drop-shadow-md">
-                <CountUp end={10} duration={2} enableScrollSpy scrollSpyOnce />+
+                <CountUp end={7} duration={2} enableScrollSpy scrollSpyOnce />+
               </div>
               <p className="text-base font-bold font-body text-text-secondary dark:text-text-secondary-dark uppercase tracking-widest">Years Experience</p>
             </div>

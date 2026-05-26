@@ -19,7 +19,7 @@ export default function Hero() {
 
       <FloatingObjects />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-12 lg:pr-20 lg:pl-32 xl:pl-40 flex flex-col lg:flex-row items-center gap-8 lg:gap-16 w-full mt-4 lg:mt-0">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20 flex flex-col lg:flex-row items-center gap-12 lg:gap-20 mt-4 lg:mt-0">
         {/* Left: Text Content */}
         <div className="flex-1 text-center lg:text-left">
 

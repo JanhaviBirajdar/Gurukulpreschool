@@ -163,7 +163,7 @@ export default function ContactPage() {
               {[
                 { icon: <MapPin className="w-8 h-8" />, title: 'Main Campus', text: 'Anand Nagar, Manohar Nagar, Talegaon Dabhade, Pune 410506', color: 'text-candy', bg: 'bg-candy/10', border: 'hover:border-candy/30' },
                 { icon: <Phone className="w-8 h-8" />, title: 'Call Us', text: '+91 8177918807\n 02114299893', color: 'text-mint', bg: 'bg-mint/10', border: 'hover:border-mint/30' },
-                { icon: <Mail className="w-8 h-8" />, title: 'Email Us', text: 'gurukul.talegao@gmail.com\nadmissions@gurukulpreschool.com', color: 'text-lavender', bg: 'bg-lavender/10', border: 'hover:border-lavender/30' },
+                { icon: <Mail className="w-8 h-8" />, title: 'Email Us', text: 'gurukul.talegao@gmail.com', color: 'text-lavender', bg: 'bg-lavender/10', border: 'hover:border-lavender/30' },
                 { icon: <Clock className="w-8 h-8" />, title: 'School Hours', text: 'Monday - Friday: 9:00 AM - 2:00 PM\nSaturday: 9:00 AM - 12:00 PM', color: 'text-sunny', bg: 'bg-sunny/10', border: 'hover:border-sunny/30' },
               ].map((info) => (
                 <motion.div key={info.title} whileHover={{ y: -8 }}

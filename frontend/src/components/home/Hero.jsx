@@ -19,9 +19,9 @@ export default function Hero() {
 
       <FloatingObjects />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex flex-col lg:flex-row items-center w-full mt-4 lg:mt-0">
+      <div className="relative z-10 max-w-7xl mx-auto px-8 sm:px-12 lg:pr-20 lg:pl-32 xl:pl-40 flex flex-col lg:flex-row items-center gap-8 lg:gap-16 w-full mt-4 lg:mt-0">
         {/* Left: Text Content */}
-        <div className="w-full lg:w-[45%] text-center lg:text-left pl-6 lg:pl-16 xl:pl-24">
+        <div className="flex-1 text-center lg:text-left">
 
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -117,7 +117,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="w-full lg:w-[58%] h-[320px] md:h-[420px]"
+          className="flex-1 w-full max-w-lg lg:max-w-xl h-[350px] md:h-[450px]"
         >
           <HeroScene />
         </motion.div>

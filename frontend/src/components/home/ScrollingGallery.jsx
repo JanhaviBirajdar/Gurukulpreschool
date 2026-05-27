@@ -1,16 +1,22 @@
 import { motion } from 'framer-motion'
 import { Sparkles } from 'lucide-react'
 
-const galleryImages = [
-  { src: '', alt: 'Creative painting' },
-  { src: '', alt: 'Building block creations' },
-  { src: '', alt: 'Curious reading' },
-  { src: '', alt: 'Group storytelling' },
-  { src: '', alt: 'Hands-on discovery' },
-  { src: '', alt: 'Pure childhood laughter' },
-  { src: '', alt: 'Outdoor active play' },
-  { src: '', alt: 'Early blackboard lessons' }
-]
+// Dynamically import all images from the folder
+const rawImages = import.meta.glob('../../assets/s/*.jpeg', { eager: true, import: 'default' })
+
+// Helper to extract a numeric sort key from filenames like "s (1).jpeg"
+const extractNumber = (path) => {
+  const match = path.match(/\((\d+)\)/)
+  return match ? parseInt(match[1], 10) : 0
+}
+
+// Build the array
+const galleryImages = Object.entries(rawImages)
+  .sort(([a], [b]) => extractNumber(a) - extractNumber(b))
+  .map(([path, src], index) => ({
+    src,
+    alt: `Gurukul preschool moments ${index + 1}`
+  }))
 
 export default function ScrollingGallery() {
   // Duplicating list to make seamless scrolling infinite

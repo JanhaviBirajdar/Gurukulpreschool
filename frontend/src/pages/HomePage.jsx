@@ -13,7 +13,7 @@ export default function HomePage() {
       <FounderSection />
       <Features />
       <ScrollingGallery />
-      <ParentReviews />
+      {/*<ParentReviews />*/}
     </motion.div>
   )
 }

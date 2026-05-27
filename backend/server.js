@@ -21,8 +21,6 @@ app.use(express.json());
 
 // Routes
 app.use('/api/inquiries', require('./routes/inquiry'));
-app.use('/api/newsletter', require('./routes/newsletter'));
-
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ success: true, message: 'Gurukul Pre School API is running! 🏫' });

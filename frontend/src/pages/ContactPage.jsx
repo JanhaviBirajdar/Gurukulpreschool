@@ -183,7 +183,7 @@ export default function ContactPage() {
             <div className="rounded-[2.5rem] overflow-hidden shadow-2xl flex-1 min-h-[350px] border-4 border-white/60 dark:border-white/10 relative group glass mt-2">
               <iframe
                 title="Gurukul Pre School Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.065!2d73.856!3d18.52!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMxJzEyLjAiTiA3M8KwNTEnMjEuNiJF!5e0!3m2!1sen!2sin!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.451641083206!2d73.68506099999999!3d18.7333529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b1000633a647%3A0x69461ab3a64d1124!2sGurukul%20Pre%20Primary%20School!5e0!3m2!1sen!2sin!4v1779861936498!5m2!1sen!2sin"
                 width="100%" height="100%" style={{ border: 0, minHeight: '350px' }}
                 allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
                 className="filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 w-full h-full object-cover"

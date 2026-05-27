@@ -261,7 +261,7 @@ export default function AboutPage() {
           </div>
 
           {/* ── Narrative Prose Sections ── */}
-          <div className="mt-28 md:mt-36 space-y-20 md:space-y-24 max-w-[900px] mx-auto relative">
+          <div style={{ marginTop: '8rem', maxWidth: '900px', marginLeft: 'auto', marginRight: 'auto', display: 'flex', flexDirection: 'column', gap: '5rem' }} className="relative">
             {/* Decorative floating blobs */}
             <div className="absolute -top-20 -left-32 w-64 h-64 bg-candy/8 rounded-full filter blur-[80px] pointer-events-none dark:bg-candy/5" />
             <div className="absolute top-1/2 -right-28 w-56 h-56 bg-lavender/8 rounded-full filter blur-[80px] pointer-events-none dark:bg-lavender/5" />

@@ -4,63 +4,63 @@ import { staggerContainer, staggerItem } from '../utils/animations'
 import { Clock, CheckCircle2, Star, BookOpen, Music, Palette, Users, ArrowRight } from 'lucide-react'
 
 const programs = [
-  { 
-    name: 'Play Group', 
-    age: '1.5 – 2.5 Years', 
+  {
+    name: 'Play Group',
+    age: '1.5 – 2.5 Years',
     duration: '2.5 Hours / Day',
     image: 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?q=80&w=800&auto=format&fit=crop',
-    icon: <Star className="w-6 h-6" />, 
-    colorClass: 'text-candy', 
-    bgClass: 'bg-candy/5 dark:bg-candy/10', 
-    borderClass: 'group-hover:border-candy/50', 
-    badgeBg: 'bg-candy/20', 
+    icon: <Star className="w-6 h-6" />,
+    colorClass: 'text-candy',
+    bgClass: 'bg-candy/5 dark:bg-candy/10',
+    borderClass: 'group-hover:border-candy/50',
+    badgeBg: 'bg-candy/20',
     hoverShadow: 'hover:shadow-candy/20',
-    gradientFrom: 'from-candy', 
+    gradientFrom: 'from-candy',
     gradientTo: 'to-candy-light',
     features: ['Sensory Play', 'Basic Motor Skills', 'Social Interaction', 'Music & Movement']
   },
-  { 
-    name: 'Nursery', 
-    age: '2.5 – 3.5 Years', 
+  {
+    name: 'Nursery',
+    age: '2.5 – 3.5 Years',
     duration: '3.0 Hours / Day',
     image: 'https://images.unsplash.com/photo-1587691592099-24045742c181?q=80&w=800&auto=format&fit=crop',
-    icon: <Music className="w-6 h-6" />, 
-    colorClass: 'text-mint', 
-    bgClass: 'bg-mint/5 dark:bg-mint/10', 
-    borderClass: 'group-hover:border-mint/50', 
-    badgeBg: 'bg-mint/20', 
+    icon: <Music className="w-6 h-6" />,
+    colorClass: 'text-mint',
+    bgClass: 'bg-mint/5 dark:bg-mint/10',
+    borderClass: 'group-hover:border-mint/50',
+    badgeBg: 'bg-mint/20',
     hoverShadow: 'hover:shadow-mint/20',
-    gradientFrom: 'from-mint', 
+    gradientFrom: 'from-mint',
     gradientTo: 'to-mint-light',
     features: ['Language Basics', 'Creative Arts', 'Potty Training Support', 'Storytelling']
   },
-  { 
-    name: 'Junior KG', 
-    age: '3.5 – 4.5 Years', 
+  {
+    name: 'Junior KG',
+    age: '3.5 – 4.5 Years',
     duration: '3.5 Hours / Day',
     image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop',
-    icon: <BookOpen className="w-6 h-6" />, 
-    colorClass: 'text-lavender', 
-    bgClass: 'bg-lavender/5 dark:bg-lavender/10', 
-    borderClass: 'group-hover:border-lavender/50', 
-    badgeBg: 'bg-lavender/20', 
+    icon: <BookOpen className="w-6 h-6" />,
+    colorClass: 'text-lavender',
+    bgClass: 'bg-lavender/5 dark:bg-lavender/10',
+    borderClass: 'group-hover:border-lavender/50',
+    badgeBg: 'bg-lavender/20',
     hoverShadow: 'hover:shadow-lavender/20',
-    gradientFrom: 'from-lavender', 
+    gradientFrom: 'from-lavender',
     gradientTo: 'to-lavender-light',
     features: ['Pre-Reading Skills', 'Numbers & Logic', 'Environmental Awareness', 'Team Projects']
   },
-  { 
-    name: 'Senior KG', 
-    age: '4.5 – 5.5 Years', 
+  {
+    name: 'Senior KG',
+    age: '4.5 – 5.5 Years',
     duration: '4.0 Hours / Day',
     image: 'https://images.unsplash.com/photo-1603354350317-6f7aaaa2d145?q=80&w=800&auto=format&fit=crop',
-    icon: <Users className="w-6 h-6" />, 
-    colorClass: 'text-sunny', 
-    bgClass: 'bg-sunny/5 dark:bg-sunny/10', 
-    borderClass: 'group-hover:border-sunny/50', 
-    badgeBg: 'bg-sunny/20', 
+    icon: <Users className="w-6 h-6" />,
+    colorClass: 'text-sunny',
+    bgClass: 'bg-sunny/5 dark:bg-sunny/10',
+    borderClass: 'group-hover:border-sunny/50',
+    badgeBg: 'bg-sunny/20',
     hoverShadow: 'hover:shadow-sunny/20',
-    gradientFrom: 'from-sunny', 
+    gradientFrom: 'from-sunny',
     gradientTo: 'to-sunny-light',
     features: ['School Readiness', 'Advanced Phonics', 'Basic Math Concepts', 'Independent Learning']
   },
@@ -76,10 +76,10 @@ const routine = [
 ]
 
 const highlights = [
-  { title: 'Language Skills', desc: 'Phonics, vocabulary building, and expression.', icon: <BookOpen className="w-12 h-12"/>, color: 'text-candy', bg: 'bg-candy' },
-  { title: 'Social Skills', desc: 'Sharing, empathy, and team collaboration.', icon: <Users className="w-12 h-12"/>, color: 'text-mint', bg: 'bg-mint' },
-  { title: 'Creativity', desc: 'Art, music, dance, and imaginative play.', icon: <Palette className="w-12 h-12"/>, color: 'text-lavender', bg: 'bg-lavender' },
-  { title: 'Physical Growth', desc: 'Motor skills, yoga, and outdoor games.', icon: <Star className="w-12 h-12"/>, color: 'text-sunny', bg: 'bg-sunny' },
+  { title: 'Language Skills', desc: 'Phonics, vocabulary building, and expression.', icon: <BookOpen className="w-12 h-12" />, color: 'text-candy', bg: 'bg-candy' },
+  { title: 'Social Skills', desc: 'Sharing, empathy, and team collaboration.', icon: <Users className="w-12 h-12" />, color: 'text-mint', bg: 'bg-mint' },
+  { title: 'Creativity', desc: 'Art, music, dance, and imaginative play.', icon: <Palette className="w-12 h-12" />, color: 'text-lavender', bg: 'bg-lavender' },
+  { title: 'Physical Growth', desc: 'Motor skills, yoga, and outdoor games.', icon: <Star className="w-12 h-12" />, color: 'text-sunny', bg: 'bg-sunny' },
 ]
 
 export default function ProgramsPage() {
@@ -87,7 +87,7 @@ export default function ProgramsPage() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-20">
-      
+
       {/* Hero Section */}
       <section className="section-padding text-center relative overflow-hidden gradient-bg">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="relative z-10 flex flex-col items-center text-center">
@@ -119,7 +119,7 @@ export default function ProgramsPage() {
           {programs.map((p) => (
             <motion.div key={p.name} variants={staggerItem} whileHover={{ y: -10 }}
               className={`rounded-3xl overflow-hidden glass dark:!bg-surface-dark group cursor-pointer border-2 border-transparent transition-all duration-500 shadow-lg ${p.hoverShadow} ${p.borderClass} flex flex-col md:flex-row`}>
-              
+
               {/* Image Section */}
               <div className="md:w-2/5 h-64 md:h-auto relative overflow-hidden">
                 <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
@@ -141,7 +141,7 @@ export default function ProgramsPage() {
                       {p.icon}
                     </motion.div>
                   </div>
-                  
+
                   <div className="flex flex-wrap gap-3 mb-8">
                     <span className={`px-5 py-2 rounded-full text-sm font-bold font-body flex items-center gap-2 ${p.badgeBg} ${p.colorClass}`}>
                       <Users className="w-4 h-4" /> {p.age}
@@ -185,7 +185,7 @@ export default function ProgramsPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
             {highlights.map((h, i) => (
-              <motion.div 
+              <motion.div
                 key={h.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -224,7 +224,7 @@ export default function ProgramsPage() {
             <div className="absolute left-1/2 top-0 bottom-0 w-1 -translate-x-1/2 bg-gradient-to-b from-candy via-lavender to-mint rounded-full opacity-30" />
 
             {routine.map((item, i) => (
-              <motion.div 
+              <motion.div
                 key={item.time}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -262,36 +262,36 @@ export default function ProgramsPage() {
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10 px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }} 
-            whileInView={{ opacity: 1, y: 0 }} 
-            viewport={{ once: true }} 
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             className="relative rounded-[3rem] md:rounded-[4rem] overflow-hidden shadow-2xl border border-white/20 dark:border-white/10"
           >
             {/* Background Image */}
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center" />
-            
+
             {/* Premium Glass Overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-candy/95 via-candy/80 to-lavender/90 dark:from-surface-dark/95 dark:via-black/80 dark:to-lavender/90 backdrop-blur-sm" />
-            
+
             <div className="relative p-12 md:p-20 text-center flex flex-col items-center">
               <span className="inline-flex items-center gap-2 px-6 py-2 rounded-full text-sm font-bold mb-8 bg-white/20 backdrop-blur-md border border-white/30 text-white font-body shadow-sm uppercase tracking-widest">
                 Admissions Open
               </span>
-              
+
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 font-heading text-white tracking-tight">
                 Give Your Child the <br className="hidden md:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white/70">Best Start 🌟</span>
               </h2>
-              
+
               <p className="text-xl md:text-2xl mb-12 max-w-2xl mx-auto font-body text-white/90 leading-relaxed">
                 Join the Gurukul family today. We are accepting applications for the upcoming academic year.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-6 justify-center w-full">
-                <motion.a 
-                  href="/contact" 
-                  whileHover={{ scale: 1.05, y: -5 }} 
+                <motion.a
+                  href="/#/contact"
+                  whileHover={{ scale: 1.05, y: -5 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-10 py-5 rounded-full text-candy dark:text-text-primary-dark font-bold text-xl shadow-[0_0_40px_rgba(255,255,255,0.3)] bg-white dark:bg-surface-dark font-heading transition-all duration-300 flex items-center justify-center gap-3 group"
                 >

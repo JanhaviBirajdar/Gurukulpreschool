@@ -112,32 +112,19 @@ export default function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-white font-bold text-2xl mb-6 font-heading">Stay Updated</h3>
-            <p className="text-purple-200/80 dark:text-slate-300 text-base mb-6 font-body leading-relaxed">Subscribe to get updates about admissions and events.</p>
-            <form onSubmit={handleSubscribe} className="flex flex-col gap-4">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Your email address"
-                className="px-6 py-4 rounded-2xl text-base bg-white/10 text-white placeholder-purple-300/50 dark:placeholder-slate-500 border border-white/10 focus:border-candy focus:ring-1 focus:ring-candy focus:outline-none transition-colors font-body"
-              />
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                type="submit"
-                style={{ padding: '16px 36px', fontSize: '18px' }}
-                className="w-full rounded-full font-bold transition-all duration-300 font-body flex items-center justify-center gap-3 shadow-md bg-gradient-to-r from-candy via-peach to-sunny text-white shadow-candy/40 border-transparent hover:shadow-lg hover:-translate-y-1"
-              >
-                Subscribe ✨
-              </motion.button>
-            </form>
-            {subStatus === 'success' && (
-              <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-mint-light text-base mt-3 font-body font-medium">Subscribed successfully! 🎉</motion.p>
-            )}
-            {subStatus === 'error' && (
-              <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-candy text-base mt-3 font-body font-medium">Something went wrong. Try again.</motion.p>
-            )}
+            <h3 className="text-white font-bold text-2xl mb-6 font-heading">Contact Us</h3>
+            <p className="text-purple-200/80 dark:text-slate-300 text-base mb-6 font-body leading-relaxed">Book a slot for your children's bright future</p>
+
+            <motion.a
+              href="/#/contact"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              style={{ padding: '16px 36px', fontSize: '18px' }}
+              className="w-full rounded-full font-bold transition-all duration-300 font-body flex items-center justify-center gap-3 shadow-md bg-gradient-to-r from-candy via-peach to-sunny text-white shadow-candy/40 border-transparent hover:shadow-lg hover:-translate-y-1"
+            >
+              Contact ✨
+            </motion.a>
+
 
             {/* Contact Info */}
             <div className="mt-10 space-y-4 font-body">

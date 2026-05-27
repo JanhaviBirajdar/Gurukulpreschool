@@ -59,7 +59,7 @@ export default function TestimonialsPage() {
       </div>
 
       {/* Trust Statistics */}
-      <section className="py-16 relative z-10">
+      <section style={{ paddingLeft: '4rem' }} className="py-16 relative z-10">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="glass p-10 rounded-[2.5rem] border border-white/40 dark:border-white/10 shadow-xl hover:-translate-y-2 transition-transform duration-300">

@@ -59,7 +59,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-purple-200/90 dark:text-slate-300 text-base leading-relaxed mb-8 font-body">
-              Where little minds bloom with joy and wonder. We provide a safe, creative, and nurturing environment for early childhood education.
+              Where little minds bloom with joy and wonder with Sankar. We provide a safe, creative, and nurturing environment for early childhood education.
             </p>
             {/* Social Icons */}
             <div className="flex gap-4">
@@ -138,7 +138,7 @@ export default function Footer() {
         {/* Divider & Copyright */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-purple-300/60 dark:text-slate-500 text-base text-center font-body font-medium">
-            © {new Date().getFullYear()} Gurukul Pre School. Made by <a href='www.om-tech-solutions.vercel.app' >OmTech solutions</a> .
+            © {new Date().getFullYear()} Gurukul Pre School. Made by <a href='www.om-tech-solutions.vercel.app' >OmTech Solutions</a> .
           </p>
           <p className="text-purple-300/50 dark:text-slate-600 text-sm font-body font-medium">
             Designed with love for early childhood education

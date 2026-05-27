@@ -1,5 +1,6 @@
 const Inquiry = require('../models/Inquiry');
 const { validationResult } = require('express-validator');
+const sendEmail = require('../utils/sendEmail');
 
 // @desc    Create new inquiry
 // @route   POST /api/inquiries
@@ -11,7 +12,18 @@ exports.createInquiry = async (req, res, next) => {
     }
 
     const { name, phone, email, message } = req.body;
+
+    // 1. Save to database
     const inquiry = await Inquiry.create({ name, phone, email, message });
+
+    // 2. Send email notification to principal
+    try {
+      await sendEmail({ name, phone, email, message });
+      console.log(`✅ Email notification sent for inquiry from ${name}`);
+    } catch (emailErr) {
+      // Log email error but don't fail the request — the inquiry is already saved
+      console.error('⚠️ Email notification failed:', emailErr.message);
+    }
 
     res.status(201).json({
       success: true,

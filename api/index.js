@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const serverless = require('serverless-http');
+
 const connectDB = require('../backend/config/db');
 const errorHandler = require('../backend/middleware/errorHandler');
 
@@ -30,4 +30,4 @@ app.get('/api/health', (req, res) => {
 
 app.use(errorHandler);
 
-module.exports = serverless(app);
+module.exports = app;

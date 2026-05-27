@@ -39,7 +39,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="relative mt-32 md:mt-48 bg-gradient-to-br from-purple-900 via-purple-950 to-slate-900 dark:from-surface-dark dark:via-slate-900 dark:to-black">
+    <footer className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-purple-950 to-slate-900 dark:from-surface-dark dark:via-slate-900 dark:to-black">
       {/* Wave SVG */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none" style={{ transform: 'translateY(-98%)' }}>
         <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-16 md:h-24">

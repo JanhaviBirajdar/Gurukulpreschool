@@ -57,7 +57,7 @@ const reviews = [
 
 export default function ParentReviews() {
   return (
-    <section className="pt-24 pb-48 md:pt-32 md:pb-64 overflow-hidden bg-gradient-to-b from-transparent via-sky/5 to-transparent dark:via-sky/2 relative">
+    <section className="pt-44 pb-48 md:pt-32 md:pb-60 overflow-hidden bg-gradient-to-b from-transparent via-sky/5 to-transparent dark:via-sky/2 relative">
       {/* Decorative Blob */}
       <div className="absolute top-1/2 right-0 w-80 h-80 bg-lavender/10 dark:bg-lavender/5 rounded-full filter blur-[100px] pointer-events-none" />
 

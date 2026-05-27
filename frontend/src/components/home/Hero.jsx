@@ -8,7 +8,7 @@ export default function Hero() {
   const { isDark } = useTheme()
 
   return (
-    <section className="relative min-h-[100dvh] flex flex-col justify-center overflow-hidden pt-12 pb-20 lg:pt-0 lg:pb-0">
+    <section style={{ paddingBottom: '1rem', paddingLeft: '2rem', paddingRight: '2rem', paddingTop: '1rem' }} className="relative min-h-[100dvh] flex flex-col justify-center overflow-hidden pt-12 pb-20 lg:pt-0 lg:pb-0">
       {/* Background */}
       <div className="absolute inset-0 gradient-bg" />
 

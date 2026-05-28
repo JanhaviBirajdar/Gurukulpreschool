@@ -112,7 +112,7 @@ export default function AboutPage() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-8">
                 <div className="text-white pl-6">
-                  <h3 className="text-left text-3xl font-bold font-heading mb-1">Arti Prakash Parekh</h3>
+                  <h3 className="text-left text-3xl font-bold font-heading mb-1">Ekta Prakash Parekh</h3>
                   <p className="font-body text-lg opacity-90 text-left">Founder & Principal</p>
                 </div>
               </div>

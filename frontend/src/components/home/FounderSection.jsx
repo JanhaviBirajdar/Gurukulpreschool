@@ -34,7 +34,7 @@ export default function FounderSection() {
             <div className="relative rounded-[2.5rem] overflow-hidden p-3 bg-white/40 dark:bg-surface-dark/40 backdrop-blur-md border border-white/50 dark:border-white/10 shadow-2xl hover:scale-[1.02] transition-transform duration-500">
               <img
                 src={founder}
-                alt="Arti Prakash Parekh"
+                alt="Ekta Prakash Parekh"
                 className="w-full h-[400px] md:h-[450px] object-cover rounded-[2rem] shadow-inner"
               />
 
@@ -82,11 +82,11 @@ export default function FounderSection() {
             {/* Signature Area */}
             <div className="mt-10 pt-8 border-t border-black/5 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-6">
               <div className="text-center sm:text-left">
-                <h4 className="font-extrabold text-2xl font-heading text-text-primary dark:text-text-primary-dark">Arti Prakash Parekh</h4>
+                <h4 className="font-extrabold text-2xl font-heading text-text-primary dark:text-text-primary-dark">Ekta Prakash Parekh</h4>
                 <p className="text-sm font-semibold text-candy font-body mt-1">Founder & Principal • Gurukul Pre School</p>
               </div>
               <div className="font-serif italic text-3xl font-medium text-lavender drop-shadow-sm select-none tracking-wide">
-                Arti Parekh
+                Ekta Parekh
               </div>
             </div>
 

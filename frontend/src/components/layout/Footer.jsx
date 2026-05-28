@@ -59,7 +59,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-purple-200/90 dark:text-slate-300 text-base leading-relaxed mb-8 font-body">
-              Where little minds bloom with joy and wonder with Sankar. We provide a safe, creative, and nurturing environment for early childhood education.
+              Where little minds bloom with joy and wonder. We provide a safe, creative, and nurturing environment for early childhood education.
             </p>
             {/* Social Icons */}
             <div className="flex gap-4">

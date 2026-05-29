@@ -94,6 +94,17 @@ export default function GalleryPage() {
 
       {/* Masonry Gallery */}
       <section className="section-padding pb-20 relative">
+        {/* Floating Stickers */}
+        <div aria-hidden="true">
+          <span className="sticker sf1 text-5xl" style={{ right: '1%', top: '5%' }}>📸</span>
+          <span className="sticker sf4 text-4xl" style={{ right: '3%', top: '25%' }}>🎨</span>
+          <span className="sticker sf7 text-4xl" style={{ right: '1%', top: '50%' }}>🌟</span>
+          <span className="sticker sf9 text-3xl" style={{ right: '5%', top: '75%' }}>🎈</span>
+          <span className="sticker sf2 text-4xl" style={{ left: '1%', top: '10%' }}>🧸</span>
+          <span className="sticker sf5 text-4xl" style={{ left: '2%', top: '35%' }}>🎀</span>
+          <span className="sticker sf11 text-3xl" style={{ left: '1%', top: '60%' }}>🦋</span>
+          <span className="sticker sf6 text-4xl" style={{ left: '3%', top: '85%' }}>🍭</span>
+        </div>
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           {/* Filters */}
           <div className="flex flex-wrap justify-center" style={{ gap: '20px', marginBottom: '60px' }}>

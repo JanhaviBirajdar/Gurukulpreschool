@@ -63,6 +63,46 @@
   100% { transform: translateX(-50%); }
 }
 
+/* ===== Floating Sticker Animations ===== */
+@keyframes stickerBounce {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-18px) rotate(5deg); }
+  50% { transform: translateY(-8px) rotate(-3deg); }
+  75% { transform: translateY(-22px) rotate(4deg); }
+}
+@keyframes stickerSway {
+  0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+  33% { transform: translateY(-14px) translateX(6px) rotate(6deg); }
+  66% { transform: translateY(-20px) translateX(-4px) rotate(-4deg); }
+}
+@keyframes stickerSpin {
+  0%, 100% { transform: translateY(0px) rotate(0deg) scale(1); }
+  50% { transform: translateY(-16px) rotate(180deg) scale(1.1); }
+}
+@keyframes stickerWiggle {
+  0%, 100% { transform: translateY(0px) rotate(-5deg); }
+  25% { transform: translateY(-12px) rotate(5deg); }
+  50% { transform: translateY(-20px) rotate(-3deg); }
+  75% { transform: translateY(-8px) rotate(7deg); }
+}
+@keyframes stickerPulse {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-15px) scale(1.15); }
+}
+.sf1 { animation: stickerBounce 4s ease-in-out infinite; }
+.sf2 { animation: stickerSway 5s ease-in-out infinite; }
+.sf3 { animation: stickerSpin 6s ease-in-out infinite; }
+.sf4 { animation: stickerWiggle 4.5s ease-in-out infinite; }
+.sf5 { animation: stickerPulse 3.5s ease-in-out infinite; }
+.sf6 { animation: stickerBounce 5.5s ease-in-out infinite 0.8s; }
+.sf7 { animation: stickerSway 4.2s ease-in-out infinite 1.2s; }
+.sf8 { animation: stickerWiggle 6s ease-in-out infinite 0.5s; }
+.sf9 { animation: stickerPulse 4.8s ease-in-out infinite 1.5s; }
+.sf10 { animation: stickerSpin 7s ease-in-out infinite 0.3s; }
+.sf11 { animation: stickerBounce 3.8s ease-in-out infinite 2s; }
+.sf12 { animation: stickerSway 5.2s ease-in-out infinite 0.7s; }
+.sticker { position: absolute; pointer-events: none; user-select: none; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.12)); z-index: 5; }
+
 @keyframes gradient-shift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }

@@ -67,6 +67,16 @@ export default function ContactPage() {
       </div>
 
       <section className="section-padding">
+        {/* Floating Stickers */}
+        <div aria-hidden="true">
+          <span className="sticker sf1 text-5xl" style={{ right: '1%', top: '8%' }}>📫</span>
+          <span className="sticker sf4 text-4xl" style={{ right: '2%', top: '35%' }}>🎈</span>
+          <span className="sticker sf7 text-3xl" style={{ right: '1%', top: '62%' }}>🌟</span>
+          <span className="sticker sf9 text-4xl" style={{ right: '3%', top: '85%' }}>🍦</span>
+          <span className="sticker sf2 text-4xl" style={{ left: '1%', top: '12%' }}>🧸</span>
+          <span className="sticker sf6 text-3xl" style={{ left: '2%', top: '42%' }}>🎀</span>
+          <span className="sticker sf11 text-4xl" style={{ left: '1%', top: '70%' }}>🦄</span>
+        </div>
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
 
           {/* Form */}

@@ -23,7 +23,7 @@ const programs = [
     name: 'Nursery',
     age: '2.5 – 3.5 Years',
     duration: '3.0 Hours / Day',
-    image: 'https://images.unsplash.com/photo-1587691592099-24045742c181?q=80&w=800&auto=format&fit=crop',
+    image: 'https://thumbs.dreamstime.com/b/cute-cartoon-kitten-student-isolated-white-background-cute-cartoon-kitten-student-isolated-white-273418328.jpg',
     icon: <Music className="w-6 h-6" />,
     colorClass: 'text-mint',
     bgClass: 'bg-mint/5 dark:bg-mint/10',
@@ -38,7 +38,7 @@ const programs = [
     name: 'Junior KG',
     age: '3.5 – 4.5 Years',
     duration: '3.5 Hours / Day',
-    image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop',
+    image: 'https://cdn.vectorstock.com/i/preview-1x/80/97/cute-girl-student-point-cartoon-vector-47738097.jpg',
     icon: <BookOpen className="w-6 h-6" />,
     colorClass: 'text-lavender',
     bgClass: 'bg-lavender/5 dark:bg-lavender/10',
@@ -53,7 +53,7 @@ const programs = [
     name: 'Senior KG',
     age: '4.5 – 5.5 Years',
     duration: '4.0 Hours / Day',
-    image: 'https://images.unsplash.com/photo-1603354350317-6f7aaaa2d145?q=80&w=800&auto=format&fit=crop',
+    image: 'https://thumbs.dreamstime.com/b/cute-cartoon-dog-student-sitting-desk-classroom-ready-to-learn-dog-student-cartoon-character-classroom-420168906.jpg',
     icon: <Users className="w-6 h-6" />,
     colorClass: 'text-sunny',
     bgClass: 'bg-sunny/5 dark:bg-sunny/10',
@@ -114,6 +114,16 @@ export default function ProgramsPage() {
 
       {/* Program Cards */}
       <section className="section-padding relative">
+        {/* Floating Stickers */}
+        <div aria-hidden="true">
+          <span className="sticker sf1 text-5xl" style={{ right: '2%', top: '8%' }}>🧸</span>
+          <span className="sticker sf4 text-4xl" style={{ right: '6%', top: '35%' }}>🎨</span>
+          <span className="sticker sf7 text-4xl" style={{ right: '1%', top: '62%' }}>🎈</span>
+          <span className="sticker sf9 text-3xl" style={{ right: '8%', top: '85%' }}>⭐</span>
+          <span className="sticker sf2 text-4xl" style={{ left: '1%', top: '15%' }}>🎀</span>
+          <span className="sticker sf6 text-4xl" style={{ left: '3%', top: '50%' }}>🍭</span>
+          <span className="sticker sf11 text-3xl" style={{ left: '1%', top: '78%' }}>🦋</span>
+        </div>
         <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}
           className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12">
           {programs.map((p) => (
@@ -159,12 +169,6 @@ export default function ProgramsPage() {
                     ))}
                   </ul>
                 </div>
-
-                <div className="flex items-center justify-between mt-4 border-t border-black/5 dark:border-white/5 pt-6">
-                  <span className={`text-base font-bold font-body ${p.colorClass} flex items-center gap-2 group-hover:underline underline-offset-4`}>
-                    Learn More <ArrowRight className="w-5 h-5" />
-                  </span>
-                </div>
               </div>
             </motion.div>
           ))}
@@ -173,12 +177,18 @@ export default function ProgramsPage() {
 
       {/* Curriculum Highlights */}
       <section className="section-padding bg-white dark:bg-surface-dark/50 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto relative z-10 px-6 sm:px-10 lg:px-16">
+        <div aria-hidden="true">
+          <span className="sticker sf5 text-4xl" style={{ right: '2%', top: '20%' }}>🍦</span>
+          <span className="sticker sf8 text-3xl" style={{ right: '7%', top: '65%' }}>🌟</span>
+          <span className="sticker sf3 text-4xl" style={{ left: '1%', top: '30%' }}>🧁</span>
+          <span className="sticker sf10 text-3xl" style={{ left: '3%', top: '72%' }}>🎀</span>
+        </div>
+        <div className="w-full max-w-7xl mx-auto relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-text-primary dark:text-text-primary-dark mb-4">
               Curriculum <span className="gradient-text">Highlights</span>
             </h2>
-            <p className="text-center text-lg font-body text-text-secondary dark:text-text-secondary-dark max-w-2xl mx-auto">
+            <p className="text-center text-lg font-body text-text-secondary dark:text-text-secondary-dark w-full">
               A balanced approach to whole-child development.
             </p>
           </motion.div>
@@ -209,12 +219,21 @@ export default function ProgramsPage() {
 
       {/* Daily Routine Timeline */}
       <section className="section-padding relative">
-        <div className="max-w-5xl mx-auto px-6 sm:px-10 lg:px-16">
+        <div aria-hidden="true">
+          <span className="sticker sf2 text-5xl" style={{ right: '2%', top: '5%' }}>🧸</span>
+          <span className="sticker sf6 text-4xl" style={{ right: '5%', top: '30%' }}>🎠</span>
+          <span className="sticker sf9 text-4xl" style={{ right: '1%', top: '58%' }}>🎈</span>
+          <span className="sticker sf4 text-3xl" style={{ right: '7%', top: '82%' }}>🌈</span>
+          <span className="sticker sf1 text-4xl" style={{ left: '1%', top: '12%' }}>🪀</span>
+          <span className="sticker sf7 text-3xl" style={{ left: '3%', top: '45%' }}>🍭</span>
+          <span className="sticker sf12 text-4xl" style={{ left: '1%', top: '75%' }}>🦄</span>
+        </div>
+        <div className="w-full max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-text-primary dark:text-text-primary-dark mb-4">
               A Day at <span className="gradient-text">Gurukul</span> ⏰
             </h2>
-            <p className="text-center text-lg font-body text-text-secondary dark:text-text-secondary-dark max-w-2xl mx-auto">
+            <p className="text-center text-lg font-body text-text-secondary dark:text-text-secondary-dark w-full">
               Structured routines give children a sense of security and help them build positive habits.
             </p>
           </motion.div>

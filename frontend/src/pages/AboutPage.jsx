@@ -208,6 +208,21 @@ export default function AboutPage() {
 
       {/* Timeline Journey */}
       <section className="section-padding relative overflow-hidden">
+        {/* Floating Stickers – Journey section */}
+        <div aria-hidden="true">
+          <span className="sticker sf1 text-5xl" style={{ right: '3%', top: '4%' }}>🧸</span>
+          <span className="sticker sf2 text-4xl" style={{ right: '8%', top: '18%' }}>🍦</span>
+          <span className="sticker sf3 text-5xl" style={{ right: '1%', top: '32%' }}>🎈</span>
+          <span className="sticker sf4 text-4xl" style={{ right: '10%', top: '46%' }}>🍭</span>
+          <span className="sticker sf5 text-3xl" style={{ right: '4%', top: '60%' }}>⭐</span>
+          <span className="sticker sf6 text-4xl" style={{ right: '12%', top: '74%' }}>🌈</span>
+          <span className="sticker sf7 text-5xl" style={{ right: '2%', top: '88%' }}>🦄</span>
+          <span className="sticker sf8 text-4xl" style={{ left: '1%', top: '10%' }}>🎀</span>
+          <span className="sticker sf9 text-4xl" style={{ left: '3%', top: '38%' }}>🧁</span>
+          <span className="sticker sf10 text-3xl" style={{ left: '0.5%', top: '62%' }}>🪀</span>
+          <span className="sticker sf11 text-4xl" style={{ left: '5%', top: '82%' }}>🪁</span>
+          <span className="sticker sf12 text-3xl" style={{ left: '2%', top: '55%' }}>🦋</span>
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-lavender/5 to-transparent dark:via-surface-dark/50 z-0" />
         <div className="max-w-5xl mx-auto relative z-10 px-6 sm:px-10 lg:px-16">
           <motion.h2
@@ -431,6 +446,13 @@ export default function AboutPage() {
 
       {/* Statistics */}
       <section className="py-16 relative overflow-hidden">
+        {/* Floating stickers for stats section */}
+        <div aria-hidden="true">
+          <span className="sticker sf3 text-4xl" style={{ right: '2%', top: '15%' }}>🎠</span>
+          <span className="sticker sf5 text-3xl" style={{ right: '8%', top: '65%' }}>🌟</span>
+          <span className="sticker sf7 text-4xl" style={{ left: '1%', top: '25%' }}>🎡</span>
+          <span className="sticker sf2 text-3xl" style={{ left: '4%', top: '70%' }}>🍬</span>
+        </div>
         {/* Subtle background blob */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-3xl bg-candy/5 dark:bg-candy/10 rounded-full filter blur-3xl opacity-50 z-0" />
 

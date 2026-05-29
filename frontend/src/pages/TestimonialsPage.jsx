@@ -60,6 +60,12 @@ export default function TestimonialsPage() {
 
       {/* Trust Statistics */}
       <section style={{ paddingLeft: '4rem' }} className="py-16 relative z-10">
+        <div aria-hidden="true">
+          <span className="sticker sf1 text-4xl" style={{ right: '2%', top: '20%' }}>🧸</span>
+          <span className="sticker sf5 text-3xl" style={{ right: '6%', top: '70%' }}>⭐</span>
+          <span className="sticker sf3 text-4xl" style={{ left: '1%', top: '30%' }}>🎈</span>
+          <span className="sticker sf8 text-3xl" style={{ left: '4%', top: '75%' }}>🍦</span>
+        </div>
         <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="glass p-10 rounded-[2.5rem] border border-white/40 dark:border-white/10 shadow-xl hover:-translate-y-2 transition-transform duration-300">
@@ -86,6 +92,12 @@ export default function TestimonialsPage() {
 
       {/* Featured Carousel */}
       <section className="section-padding overflow-hidden relative">
+        <div aria-hidden="true">
+          <span className="sticker sf2 text-5xl" style={{ right: '3%', top: '15%' }}>💖</span>
+          <span className="sticker sf6 text-4xl" style={{ right: '1%', top: '55%' }}>🌟</span>
+          <span className="sticker sf4 text-4xl" style={{ left: '2%', top: '20%' }}>🧡</span>
+          <span className="sticker sf9 text-3xl" style={{ left: '1%', top: '65%' }}>🎀</span>
+        </div>
         <div className="max-w-4xl mx-auto relative z-10">
           <Swiper
             effect={'cards'}
@@ -121,6 +133,12 @@ export default function TestimonialsPage() {
 
       {/* All Reviews Grid */}
       <section className="section-padding bg-lavender/5 dark:bg-surface-dark relative">
+        <div aria-hidden="true">
+          <span className="sticker sf7 text-4xl" style={{ right: '1%', top: '10%' }}>🍰</span>
+          <span className="sticker sf3 text-3xl" style={{ right: '5%', top: '55%' }}>🍭</span>
+          <span className="sticker sf10 text-4xl" style={{ left: '1%', top: '20%' }}>🦄</span>
+          <span className="sticker sf5 text-3xl" style={{ left: '3%', top: '68%' }}>🎠</span>
+        </div>
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center mb-16">
             <h2 className="text-center text-4xl md:text-5xl font-extrabold font-heading text-text-primary dark:text-text-primary-dark">More Love from <span className="gradient-text">Parents</span> ❤️</h2>

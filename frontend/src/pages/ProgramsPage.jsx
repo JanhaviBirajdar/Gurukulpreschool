@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import { useTheme } from '../context/ThemeContext'
 import { staggerContainer, staggerItem } from '../utils/animations'
@@ -88,6 +89,12 @@ export default function ProgramsPage() {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-20">
 
+      <Helmet>
+        <title>Programs | Gurukul Pre School — Play Group, Nursery, Junior KG &amp; Senior KG</title>
+        <meta name="description" content="Explore Gurukul Pre School's age-appropriate programs in Talegaon: Play Group (1.5–2.5 yrs), Nursery (2.5–3.5 yrs), Junior KG, and Senior KG. Scientifically designed for holistic child development." />
+        <link rel="canonical" href="https://gurukulpreschool.vercel.app/programs" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="section-padding text-center relative overflow-hidden gradient-bg">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="relative z-10 flex flex-col items-center text-center">
@@ -132,7 +139,7 @@ export default function ProgramsPage() {
 
               {/* Image Section */}
               <div className="md:w-2/5 h-64 md:h-auto relative overflow-hidden">
-                <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                <img src={p.image} alt={`${p.name} program at Gurukul Pre School Talegaon — ${p.age}`} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 md:from-black/40 to-transparent" />
                 <div className="absolute bottom-4 left-4 md:hidden">
                   <h3 className="text-3xl font-bold font-heading text-white">{p.name}</h3>
@@ -309,7 +316,7 @@ export default function ProgramsPage() {
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center w-full">
                 <motion.a
-                  href="/#/contact"
+                  href="/contact"
                   whileHover={{ scale: 1.05, y: -5 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-10 py-5 rounded-full text-candy dark:text-text-primary-dark font-bold text-xl shadow-[0_0_40px_rgba(255,255,255,0.3)] bg-white dark:bg-surface-dark font-heading transition-all duration-300 flex items-center justify-center gap-3 group"

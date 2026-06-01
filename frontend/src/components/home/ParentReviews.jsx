@@ -57,11 +57,19 @@ const reviews = [
 
 export default function ParentReviews() {
   return (
-    <section style={{ paddingBottom: '6rem', paddingLeft: '2rem', paddingRight: '2rem', paddingTop: '4rem' }} className="pt-44 md:pt-32 overflow-hidden bg-gradient-to-b from-transparent via-sky/5 to-transparent dark:via-sky/2 relative">
+    <section style={{ paddingBottom: '6rem', paddingTop: '4rem', paddingLeft: '2.5rem', paddingRight: '2.5rem' }} className="pt-44 md:pt-32 overflow-hidden bg-gradient-to-b from-transparent via-sky/5 to-transparent dark:via-sky/2 relative">
       {/* Decorative Blob */}
       <div className="absolute top-1/2 right-0 w-80 h-80 bg-lavender/10 dark:bg-lavender/5 rounded-full filter blur-[100px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 xl:px-20">
+      {/* Floating Stickers */}
+      <div aria-hidden="true">
+        <span className="sticker sf3 text-5xl" style={{ right: '3%', top: '15%' }}>🌟</span>
+        <span className="sticker sf8 text-4xl" style={{ right: '6%', top: '65%' }}>🧸</span>
+        <span className="sticker sf5 text-4xl" style={{ left: '2%', top: '25%' }}>💖</span>
+        <span className="sticker sf10 text-3xl" style={{ left: '4%', top: '75%' }}>🍭</span>
+      </div>
+
+      <div className="max-w-7xl mx-auto">
 
         {/* Section Header */}
         <div className="text-center mb-16 md:mb-20">
@@ -90,12 +98,13 @@ export default function ParentReviews() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative px-2 sm:px-4"
+          className="relative"
         >
           <Swiper
             modules={[Autoplay, Pagination]}
             spaceBetween={30}
             slidesPerView={1}
+            loop={true}
             autoplay={{ delay: 5000, disableOnInteraction: false }}
             pagination={{ clickable: true, dynamicBullets: true }}
             breakpoints={{

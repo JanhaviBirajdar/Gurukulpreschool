@@ -23,7 +23,7 @@ export default function ScrollingGallery() {
   const duplicatedImages = [...galleryImages, ...galleryImages, ...galleryImages]
 
   return (
-    <section className="pt-24 pb-64 md:pt-32 md:pb-48 overflow-hidden bg-white/30 dark:bg-transparent relative">
+    <section style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem' }} className="pt-24 pb-64 md:pt-32 md:pb-48 overflow-hidden bg-white/30 dark:bg-transparent relative">
       {/* Decorative Blob */}
       <div className="absolute top-1/2 -left-32 w-80 h-80 rounded-full opacity-10 blur-[90px] bg-mint pointer-events-none" />
 

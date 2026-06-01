@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { submitInquiry } from '../utils/api'
@@ -41,6 +42,12 @@ export default function ContactPage() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-20">
+
+      <Helmet>
+        <title>Contact Us | Gurukul Pre School — Schedule a Visit in Talegaon</title>
+        <meta name="description" content="Contact Gurukul Pre School in Talegaon, Pune. Schedule a campus visit, enquire about admissions for Play Group, Nursery, Junior KG or Senior KG. Call +91 8177918807." />
+        <link rel="canonical" href="https://gurukulpreschool.vercel.app/contact" />
+      </Helmet>
 
       {/* Hero Section */}
       <section className="section-padding text-center relative overflow-hidden gradient-bg">

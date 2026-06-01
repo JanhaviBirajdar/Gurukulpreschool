@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import { useTheme } from '../context/ThemeContext'
 import { staggerContainer, staggerItem } from '../utils/animations'
@@ -69,6 +70,11 @@ export default function AboutPage() {
       exit={{ opacity: 0 }}
       className="pt-20"
     >
+      <Helmet>
+        <title>About Us | Gurukul Pre School — Our Story &amp; Values</title>
+        <meta name="description" content="Learn about Gurukul Pre School's journey since 2019. Meet founder Ekta Prakash Parekh and discover our core values: safe environment, creative learning, and certified teachers in Talegaon." />
+        <link rel="canonical" href="https://gurukulpreschool.vercel.app/about" />
+      </Helmet>
       {/* Hero Section */}
       <section className="section-padding text-center relative overflow-hidden gradient-bg">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="relative z-10 flex flex-col items-center text-center">
@@ -107,7 +113,7 @@ export default function AboutPage() {
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-2xl card-shadow max-w-sm mx-auto">
               <img
                 src={founder}
-                alt="Founder"
+                alt="Ekta Prakash Parekh — Founder and Principal of Gurukul Pre School"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-8">
@@ -315,7 +321,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl md:text-3xl font-bold font-heading text-text-primary dark:text-text-primary mb-4 text-center">
                   Beyond Books & Alphabets
                 </h3>
-                <p className="text-[1.05rem] leading-[1.85] font-body text-text-secondary font-medium max-w-xl mx-auto mb-6 text-center">
+                <p className="text-[1.05rem] leading-[1.85] font-body text-text-secondary font-medium w-full text-center mb-6">
                   At Gurukul, education goes beyond books and alphabets. We believe preschool learning is the foundation of a child's overall growth — nurturing <strong className="text-text-primary">holistic development</strong> across every dimension.
                 </p>
 
@@ -366,7 +372,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl md:text-3xl font-bold font-heading text-text-primary dark:text-text-primary mb-4 text-center">
                   Parents as Partners
                 </h3>
-                <p className="text-[1.05rem] leading-[1.85] font-body text-text-secondary font-medium max-w-xl mx-auto mb-6 text-center">
+                <p className="text-[1.05rem] leading-[1.85] font-body text-text-secondary font-medium w-full text-center mb-6">
                   Parents play an important role in a child's learning journey. We regularly conduct parent meetings and special activities, creating joyful memories and cultural connections for families.
                 </p>
 
@@ -432,7 +438,7 @@ export default function AboutPage() {
                   <div className="h-px w-10 bg-gradient-to-l from-transparent to-candy/30" />
                 </div>
 
-                <p className="text-[1.05rem] leading-[1.85] font-body text-text-secondary font-medium max-w-xl mx-auto">
+                <p className="text-[1.05rem] leading-[1.85] font-body text-text-secondary font-medium w-full text-center">
                   Our aim is to create confident, happy, disciplined, and morally strong children who are ready not only for school but also for life. Gurukul Pre-School stands as a growing family built on trust, love, learning, and values.
                 </p>
 
@@ -448,8 +454,8 @@ export default function AboutPage() {
       <section className="py-16 relative overflow-hidden">
         {/* Floating stickers for stats section */}
         <div aria-hidden="true">
-          <span className="sticker sf3 text-4xl" style={{ right: '2%', top: '15%' }}>🎠</span>
-          <span className="sticker sf5 text-3xl" style={{ right: '8%', top: '65%' }}>🌟</span>
+          <span className="sticker sf3 text-4xl" style={{ right: '2%', top: '15%' }}>🌟</span>
+          <span className="sticker sf5 text-3xl" style={{ right: '8%', top: '65%' }}>🎠</span>
           <span className="sticker sf7 text-4xl" style={{ left: '1%', top: '25%' }}>🎡</span>
           <span className="sticker sf2 text-3xl" style={{ left: '4%', top: '70%' }}>🍬</span>
         </div>

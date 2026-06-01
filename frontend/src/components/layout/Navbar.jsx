@@ -48,7 +48,7 @@ export default function Navbar() {
               whileHover={{ rotate: 10, scale: 1.1 }}
               className="w-10 h-10 md:w-12 md:h-12 rounded-2xl flex items-center justify-center text-white font-bold text-xl bg-gradient-to-br from-candy to-lavender shadow-lg shadow-candy/30"
             >
-              <img src={logo} alt="Logo" />
+              <img src={logo} alt="Gurukul Pre School Logo" />
             </motion.div>
             <div className="flex flex-col">
               <span className="font-heading font-extrabold text-xl md:text-2xl leading-tight">

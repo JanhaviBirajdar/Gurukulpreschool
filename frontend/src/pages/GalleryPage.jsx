@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTheme } from '../context/ThemeContext'
@@ -67,6 +68,11 @@ export default function GalleryPage() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-20">
+      <Helmet>
+        <title>Gallery | Gurukul Pre School — Classrooms, Activities &amp; Events</title>
+        <meta name="description" content="Browse our gallery of joyful moments at Gurukul Pre School in Talegaon — classrooms, activities, celebrations, and events. See why 1900+ families love us." />
+        <link rel="canonical" href="https://gurukulpreschool.vercel.app/gallery" />
+      </Helmet>
       {/* Hero Section */}
       <section className="section-padding text-center relative overflow-hidden gradient-bg">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="relative z-10 flex flex-col items-center text-center">
@@ -168,7 +174,7 @@ export default function GalleryPage() {
                   >
                     <img
                       src={item.src}
-                      alt={item.title}
+                      alt={`${item.title} — ${item.category} at Gurukul Pre School Talegaon`}
                       loading="lazy"
                       className="w-full h-auto block group-hover:scale-110 transition-transform duration-700 ease-out"
                     />

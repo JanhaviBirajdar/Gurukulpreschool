@@ -116,7 +116,7 @@ export default function Footer() {
             <p className="text-purple-200/80 dark:text-slate-300 text-base mb-6 font-body leading-relaxed">Book a slot for your children's bright future</p>
 
             <motion.a
-              href="/#/contact"
+              href="/contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               style={{ padding: '16px 36px', fontSize: '18px' }}

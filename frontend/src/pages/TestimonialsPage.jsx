@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import { useTheme } from '../context/ThemeContext'
 import { staggerContainer, staggerItem } from '../utils/animations'
@@ -35,6 +36,12 @@ export default function TestimonialsPage() {
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="pt-20">
 
+      <Helmet>
+        <title>Testimonials | Gurukul Pre School — Happy Parent Reviews</title>
+        <meta name="description" content="See what 1900+ happy parents say about Gurukul Pre School in Talegaon. 100% parent satisfaction with 7+ years of excellence in preschool education." />
+        <link rel="canonical" href="https://gurukulpreschool.vercel.app/testimonials" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="section-padding text-center relative overflow-hidden gradient-bg">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="relative z-10 flex flex-col items-center text-center">
@@ -59,7 +66,7 @@ export default function TestimonialsPage() {
       </div>
 
       {/* Trust Statistics */}
-      <section style={{ paddingLeft: '4rem' }} className="py-16 relative z-10">
+      <section className="py-16 relative z-10">
         <div aria-hidden="true">
           <span className="sticker sf1 text-4xl" style={{ right: '2%', top: '20%' }}>🧸</span>
           <span className="sticker sf5 text-3xl" style={{ right: '6%', top: '70%' }}>⭐</span>
@@ -67,7 +74,7 @@ export default function TestimonialsPage() {
           <span className="sticker sf8 text-3xl" style={{ left: '4%', top: '75%' }}>🍦</span>
         </div>
         <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div className="glass p-10 rounded-[2.5rem] border border-white/40 dark:border-white/10 shadow-xl hover:-translate-y-2 transition-transform duration-300">
               <div className="text-5xl font-extrabold font-heading text-candy mb-3 drop-shadow-md">
                 <CountUp end={100} duration={2} enableScrollSpy scrollSpyOnce />%
@@ -85,6 +92,12 @@ export default function TestimonialsPage() {
                 <CountUp end={7} duration={2} enableScrollSpy scrollSpyOnce />+
               </div>
               <p className="text-base font-bold font-body text-text-secondary dark:text-text-secondary-dark uppercase tracking-widest">Years Experience</p>
+            </div>
+            <div className="glass p-10 rounded-[2.5rem] border border-white/40 dark:border-white/10 shadow-xl hover:-translate-y-2 transition-transform duration-300">
+              <div className="text-5xl font-extrabold font-heading text-sunny mb-3 drop-shadow-md">
+                <CountUp end={50} duration={2} enableScrollSpy scrollSpyOnce />+
+              </div>
+              <p className="text-base font-bold font-body text-text-secondary dark:text-text-secondary-dark uppercase tracking-widest">Fun Activities</p>
             </div>
           </div>
         </div>
@@ -105,7 +118,7 @@ export default function TestimonialsPage() {
             modules={[EffectCards, Autoplay, Pagination]}
             autoplay={{ delay: 5000, disableOnInteraction: false }}
             pagination={{ clickable: true, dynamicBullets: true }}
-            className="w-[300px] sm:w-[450px] md:w-[600px] pb-14"
+            className="w-[300px] sm:w-[450px] md:w-[600px] mx-auto pb-14"
           >
             {testimonials.map((t, i) => (
               <SwiperSlide key={i} className="rounded-3xl shadow-2xl h-auto">

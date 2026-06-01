@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gurukulpreschool.vercel.app/sitemap.xml

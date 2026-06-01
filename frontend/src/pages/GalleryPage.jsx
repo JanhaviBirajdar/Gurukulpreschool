@@ -71,7 +71,7 @@ export default function GalleryPage() {
       <Helmet>
         <title>Gallery | Gurukul Pre School — Classrooms, Activities &amp; Events</title>
         <meta name="description" content="Browse our gallery of joyful moments at Gurukul Pre School in Talegaon — classrooms, activities, celebrations, and events. See why 1900+ families love us." />
-        <link rel="canonical" href="https://gurukulpreschool.vercel.app/gallery" />
+        <link rel="canonical" href="https://gurukulschooltalegaon.in/gallery" />
       </Helmet>
       {/* Hero Section */}
       <section className="section-padding text-center relative overflow-hidden gradient-bg">
@@ -121,11 +121,10 @@ export default function GalleryPage() {
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setActive(cat)}
                 style={{ padding: '16px 36px', fontSize: '18px' }}
-                className={`relative rounded-full font-bold font-body flex items-center gap-3 shadow-md border border-black/5 dark:border-white/5 bg-white dark:bg-surface-dark transition-colors duration-300 ${
-                  active === cat 
-                    ? 'text-white' 
+                className={`relative rounded-full font-bold font-body flex items-center gap-3 shadow-md border border-black/5 dark:border-white/5 bg-white dark:bg-surface-dark transition-colors duration-300 ${active === cat
+                    ? 'text-white'
                     : 'text-text-secondary dark:text-text-secondary-dark hover:text-candy'
-                }`}
+                  }`}
               >
                 {/* Sliding background pill */}
                 {active === cat && (
@@ -162,11 +161,11 @@ export default function GalleryPage() {
                     exit={{ opacity: 0, scale: 0.9, y: 20 }}
                     viewport={{ once: true, margin: '-60px' }}
                     whileHover={{ y: -8, scale: 1.02 }}
-                    transition={{ 
-                      type: 'spring', 
-                      stiffness: 120, 
-                      damping: 18, 
-                      delay: Math.min(i % 8, 4) * 0.05 
+                    transition={{
+                      type: 'spring',
+                      stiffness: 120,
+                      damping: 18,
+                      delay: Math.min(i % 8, 4) * 0.05
                     }}
                     onClick={() => setIndex(i)}
                     style={{ marginBottom: '24px' }}

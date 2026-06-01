@@ -46,7 +46,7 @@ export default function ContactPage() {
       <Helmet>
         <title>Contact Us | Gurukul Pre School — Schedule a Visit in Talegaon</title>
         <meta name="description" content="Contact Gurukul Pre School in Talegaon, Pune. Schedule a campus visit, enquire about admissions for Play Group, Nursery, Junior KG or Senior KG. Call +91 8177918807." />
-        <link rel="canonical" href="https://gurukulpreschool.vercel.app/contact" />
+        <link rel="canonical" href="https://gurukulschooltalegaon.in/contact" />
       </Helmet>
 
       {/* Hero Section */}

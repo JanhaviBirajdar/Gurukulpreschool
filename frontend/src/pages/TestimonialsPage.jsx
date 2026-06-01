@@ -39,7 +39,7 @@ export default function TestimonialsPage() {
       <Helmet>
         <title>Testimonials | Gurukul Pre School — Happy Parent Reviews</title>
         <meta name="description" content="See what 1900+ happy parents say about Gurukul Pre School in Talegaon. 100% parent satisfaction with 7+ years of excellence in preschool education." />
-        <link rel="canonical" href="https://gurukulpreschool.vercel.app/testimonials" />
+        <link rel="canonical" href="https://gurukulschooltalegaon.in/testimonials" />
       </Helmet>
 
       {/* Hero Section */}
@@ -66,15 +66,15 @@ export default function TestimonialsPage() {
       </div>
 
       {/* Trust Statistics */}
-      <section className="py-16 relative z-10">
+      <section style={{ paddingLeft: '1.5rem' }} className="py-16 relative w-full overflow-hidden">
         <div aria-hidden="true">
           <span className="sticker sf1 text-4xl" style={{ right: '2%', top: '20%' }}>🧸</span>
           <span className="sticker sf5 text-3xl" style={{ right: '6%', top: '70%' }}>⭐</span>
           <span className="sticker sf3 text-4xl" style={{ left: '1%', top: '30%' }}>🎈</span>
           <span className="sticker sf8 text-3xl" style={{ left: '4%', top: '75%' }}>🍦</span>
         </div>
-        <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        <div className="w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 w-full text-center">
             <div className="glass p-10 rounded-[2.5rem] border border-white/40 dark:border-white/10 shadow-xl hover:-translate-y-2 transition-transform duration-300">
               <div className="text-5xl font-extrabold font-heading text-candy mb-3 drop-shadow-md">
                 <CountUp end={100} duration={2} enableScrollSpy scrollSpyOnce />%

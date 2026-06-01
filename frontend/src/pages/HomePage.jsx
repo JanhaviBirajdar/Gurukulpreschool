@@ -13,7 +13,7 @@ export default function HomePage() {
       <Helmet>
         <title>Gurukul Pre School — Where Little Minds Bloom in Talegaon</title>
         <meta name="description" content="Gurukul Pre School in Talegaon — nurturing young minds since 2019 with creative learning, a safe environment, and qualified teachers. Play Group to Senior KG. 1900+ happy students." />
-        <link rel="canonical" href="https://gurukulpreschool.vercel.app/" />
+        <link rel="canonical" href="https://gurukulschooltalegaon.in/" />
       </Helmet>
       <Hero />
       <FounderSection />

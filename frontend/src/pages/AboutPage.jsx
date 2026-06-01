@@ -73,7 +73,7 @@ export default function AboutPage() {
       <Helmet>
         <title>About Us | Gurukul Pre School — Our Story &amp; Values</title>
         <meta name="description" content="Learn about Gurukul Pre School's journey since 2019. Meet founder Ekta Prakash Parekh and discover our core values: safe environment, creative learning, and certified teachers in Talegaon." />
-        <link rel="canonical" href="https://gurukulpreschool.vercel.app/about" />
+        <link rel="canonical" href="https://gurukulschooltalegaon.in/about" />
       </Helmet>
       {/* Hero Section */}
       <section className="section-padding text-center relative overflow-hidden gradient-bg">
@@ -318,11 +318,11 @@ export default function AboutPage() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl md:text-3xl font-bold font-heading text-text-primary dark:text-text-primary mb-4 text-center">
+                <h3 className="text-2xl md:text-3xl font-bold font-heading text-text-primary dark:text-slate-100 mb-4 text-center">
                   Beyond Books & Alphabets
                 </h3>
                 <p className="text-[1.05rem] leading-[1.85] font-body text-text-secondary font-medium w-full text-center mb-6">
-                  At Gurukul, education goes beyond books and alphabets. We believe preschool learning is the foundation of a child's overall growth — nurturing <strong className="text-text-primary">holistic development</strong> across every dimension.
+                  At Gurukul, education goes beyond books and alphabets. We believe preschool learning is the foundation of a child's overall growth — nurturing <strong className="text-white-800">holistic development</strong> across every dimension.
                 </p>
 
                 {/* Clean pills centered */}
@@ -369,7 +369,7 @@ export default function AboutPage() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-2xl md:text-3xl font-bold font-heading text-text-primary dark:text-text-primary mb-4 text-center">
+                <h3 className="text-2xl md:text-3xl font-bold font-heading text-text-primary dark:text-slate-100 mb-4 text-center">
                   Parents as Partners
                 </h3>
                 <p className="text-[1.05rem] leading-[1.85] font-body text-text-secondary font-medium w-full text-center mb-6">

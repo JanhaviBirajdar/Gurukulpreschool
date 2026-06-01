@@ -71,7 +71,7 @@ Open http://localhost:5173 in your browser.
 ### Backend (`backend/.env`)
 ```
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/gurukulpreschool
+MONGO_URI=yourmongouri
 FRONTEND_URL=http://localhost:5173
 ```
 

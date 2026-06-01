@@ -92,7 +92,7 @@ export default function ProgramsPage() {
       <Helmet>
         <title>Programs | Gurukul Pre School — Play Group, Nursery, Junior KG &amp; Senior KG</title>
         <meta name="description" content="Explore Gurukul Pre School's age-appropriate programs in Talegaon: Play Group (1.5–2.5 yrs), Nursery (2.5–3.5 yrs), Junior KG, and Senior KG. Scientifically designed for holistic child development." />
-        <link rel="canonical" href="https://gurukulpreschool.vercel.app/programs" />
+        <link rel="canonical" href="https://gurukulschooltalegaon.in/programs" />
       </Helmet>
 
       {/* Hero Section */}

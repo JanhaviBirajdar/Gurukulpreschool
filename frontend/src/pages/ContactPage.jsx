@@ -56,7 +56,7 @@ export default function ContactPage() {
             <CalendarHeart className="w-6 h-6 text-mint fill-mint/20" /> Let's Connect
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 font-heading text-text-primary dark:text-text-primary-dark tracking-tight">
-            Schedule a <span className="gradient-text">Visit</span>
+            Schedule a <span className="text-blue-600">Visit</span>
           </h1>
           <p className="text-center text-xl md:text-2xl max-w-2xl mx-auto font-body font-medium text-text-secondary dark:text-text-secondary-dark leading-relaxed">
             We would love to welcome you and your child to experience the magic of Gurukul. Reach out to schedule a tour!

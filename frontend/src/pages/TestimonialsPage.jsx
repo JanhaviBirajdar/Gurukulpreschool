@@ -49,7 +49,7 @@ export default function TestimonialsPage() {
             <MessageCircle className="w-6 h-6 text-sky fill-sky/20" /> Testimonials
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 font-heading text-text-primary dark:text-text-primary-dark tracking-tight">
-            Happy <span className="gradient-text">Parents</span>
+            Happy <span className="text-blue-600">Parents</span>
           </h1>
           <p className="text-center text-xl md:text-2xl max-w-2xl mx-auto font-body font-medium text-text-secondary dark:text-text-secondary-dark leading-relaxed">
             Discover why parents trust Gurukul Pre School for their child's most crucial developmental years.
@@ -154,7 +154,7 @@ export default function TestimonialsPage() {
         </div>
         <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
           <div className="text-center mb-16">
-            <h2 className="text-center text-4xl md:text-5xl font-extrabold font-heading text-text-primary dark:text-text-primary-dark">More Love from <span className="gradient-text">Parents</span> ❤️</h2>
+            <h2 className="text-center text-4xl md:text-5xl font-extrabold font-heading text-text-primary dark:text-text-primary-dark">More Love from <span className="text-blue-600">Parents</span> ❤️</h2>
           </div>
           <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">

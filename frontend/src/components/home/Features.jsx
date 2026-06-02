@@ -77,7 +77,7 @@ export default function Features() {
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 font-heading text-text-primary dark:text-text-primary-dark tracking-tight">
             Why Choose{' '}
-            <span className="gradient-text">Gurukul?</span>
+            <span className="text-blue-600">Gurukul?</span>
           </h2>
           <p className="text-center text-lg md:text-xl max-w-3xl font-body text-text-secondary dark:text-text-secondary-dark font-medium leading-relaxed">
             We create a nurturing, premium environment where every child feels loved, inspired, and excited to learn.

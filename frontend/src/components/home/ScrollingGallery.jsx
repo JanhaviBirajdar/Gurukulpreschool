@@ -39,7 +39,7 @@ export default function ScrollingGallery() {
             🎨 Sweet Memories
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 font-heading text-text-primary dark:text-text-primary-dark tracking-tight">
-            Moments of <span className="gradient-text">Joy & Learning</span>
+            Moments of <span className="text-blue-600">Joy & Learning</span>
           </h2>
           <p className="text-center text-lg md:text-xl max-w-3xl font-body text-text-secondary dark:text-text-secondary-dark font-medium leading-relaxed">
             Take a beautiful peek into the daily adventures, bright smiles, and rich developmental experiences at Gurukul.

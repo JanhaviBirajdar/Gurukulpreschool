@@ -66,13 +66,13 @@ export default function FounderSection() {
 
             <h2 className="text-4xl md:text-5xl font-extrabold mb-8 font-heading text-text-primary dark:text-text-primary-dark leading-tight tracking-tight">
               Meet Our{' '}
-              <span className="gradient-text">Founder & Principal</span>
+              <span className="text-blue-600">Founder & Principal</span>
             </h2>
 
             <div className="space-y-6 text-text-secondary dark:text-text-secondary-dark text-lg md:text-xl font-body leading-relaxed font-medium">
               <p className="relative">
                 <span className="absolute -top-6 -left-6 text-6xl text-candy/10 font-serif">“</span>
-                Every child deserves love, confidence, creativity, and values along with education. At Gurukul, we nurture their unique potential with infinite care, warmth, and <span className="text-candy font-bold">Sanskar (संस्कार)</span>.
+                Every child deserves love, confidence, creativity, and values along with education. At Gurukul, we nurture their unique potential with infinite care, warmth, and <span className="text-blue-600 font-bold">Sanskar (संस्कार)</span>.
               </p>
               <p>
                 We believe that early childhood is not about pressure; it is about building curiosity, exploration, and beautiful childhood memories. Our dedicated educators create a home away from home where your little ones can bloom into confident, compassionate, and bright individuals.
@@ -83,9 +83,9 @@ export default function FounderSection() {
             <div className="mt-10 pt-8 border-t border-black/5 dark:border-white/5 flex flex-col sm:flex-row items-center justify-between gap-6">
               <div className="text-center sm:text-left">
                 <h4 className="font-extrabold text-2xl font-heading text-text-primary dark:text-text-primary-dark">Ekta Prakash Parekh</h4>
-                <p className="text-sm font-semibold text-candy font-body mt-1">Founder & Principal • Gurukul Pre School</p>
+                <p className="text-sm font-semibold text-blue-600 font-body mt-1">Founder & Principal • Gurukul Pre School</p>
               </div>
-              <div className="font-serif italic text-3xl font-medium text-lavender drop-shadow-sm select-none tracking-wide">
+              <div className="font-serif italic text-3xl font-medium text-blue-600 drop-shadow-sm select-none tracking-wide">
                 Ekta Parekh
               </div>
             </div>

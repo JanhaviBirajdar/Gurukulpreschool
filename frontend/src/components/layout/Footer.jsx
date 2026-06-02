@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useTheme } from '../../context/ThemeContext'
 import { subscribeNewsletter } from '../../utils/api'
+import logo from '../../assets/logo.jpeg'
 
 const quickLinks = [
   { name: 'Home', path: '/' },
@@ -52,10 +53,14 @@ export default function Footer() {
           {/* Logo & About */}
           <div className="lg:col-span-1 flex flex-col">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-white font-extrabold text-2xl bg-gradient-to-br from-candy to-lavender shadow-lg shadow-candy/30">G</div>
-              <div className="flex flex-col">
-                <span className="font-extrabold text-2xl text-white font-heading tracking-tight leading-tight">Gurukul</span>
-                <span className="font-extrabold text-xl text-lavender-light font-heading tracking-tight leading-tight">Pre School</span>
+              <motion.div
+                whileHover={{ rotate: 10, scale: 1.1 }}
+                className="w-10 h-10 md:w-12 md:h-12 rounded-2xl flex items-center justify-center text-white font-bold text-xl bg-gradient-to-br from-candy to-lavender shadow-lg shadow-candy/30"
+              >
+                <img src={logo} alt="Gurukul Pre School Logo" />
+              </motion.div>              <div className="flex flex-col">
+                <span className="font-extrabold text-2xl text-blue-600 font-heading tracking-tight leading-tight">Gurukul</span>
+                <span className="font-extrabold text-xl text-blue-600 font-heading tracking-tight leading-tight">Pre School</span>
               </div>
             </div>
             <p className="text-purple-200/90 dark:text-slate-300 text-base leading-relaxed mb-8 font-body">

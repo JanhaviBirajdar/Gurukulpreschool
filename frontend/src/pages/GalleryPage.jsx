@@ -80,7 +80,7 @@ export default function GalleryPage() {
             <Camera className="w-6 h-6 text-peach fill-peach/20" /> Memories
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 font-heading text-text-primary dark:text-text-primary-dark tracking-tight">
-            Our <span className="gradient-text">Gallery</span>
+            Our <span className="text-blue-600">Gallery</span>
           </h1>
           <p className="text-center text-xl md:text-2xl max-w-2xl mx-auto font-body font-medium text-text-secondary dark:text-text-secondary-dark leading-relaxed">
             Beautiful glimpses of joy, laughter, and magical moments captured at Gurukul Pre School.
@@ -122,8 +122,8 @@ export default function GalleryPage() {
                 onClick={() => setActive(cat)}
                 style={{ padding: '16px 36px', fontSize: '18px' }}
                 className={`relative rounded-full font-bold font-body flex items-center gap-3 shadow-md border border-black/5 dark:border-white/5 bg-white dark:bg-surface-dark transition-colors duration-300 ${active === cat
-                    ? 'text-white'
-                    : 'text-text-secondary dark:text-text-secondary-dark hover:text-candy'
+                  ? 'text-white'
+                  : 'text-text-secondary dark:text-text-secondary-dark hover:text-candy'
                   }`}
               >
                 {/* Sliding background pill */}

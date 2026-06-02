@@ -102,7 +102,7 @@ export default function ProgramsPage() {
             <Star className="w-6 h-6 text-lavender fill-lavender/20" /> Learning Paths
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 font-heading text-text-primary dark:text-text-primary-dark tracking-tight">
-            Our <span className="gradient-text">Programs</span>
+            Our <span className="text-blue-600">Programs</span>
           </h1>
           <p className="text-center text-xl md:text-2xl max-w-2xl mx-auto font-body font-medium text-text-secondary dark:text-text-secondary-dark leading-relaxed">
             Age-appropriate programs scientifically designed to nurture curiosity, creativity, and a lifelong love of learning.
@@ -193,7 +193,7 @@ export default function ProgramsPage() {
         <div className="w-full max-w-7xl mx-auto relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-text-primary dark:text-text-primary-dark mb-4">
-              Curriculum <span className="gradient-text">Highlights</span>
+              Curriculum <span className="text-blue-600">Highlights</span>
             </h2>
             <p className="text-center text-lg font-body text-text-secondary dark:text-text-secondary-dark w-full">
               A balanced approach to whole-child development.
@@ -238,7 +238,7 @@ export default function ProgramsPage() {
         <div className="w-full max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-extrabold font-heading text-text-primary dark:text-text-primary-dark mb-4">
-              A Day at <span className="gradient-text">Gurukul</span> ⏰
+              A Day at <span className="text-blue-600">Gurukul</span> ⏰
             </h2>
             <p className="text-center text-lg font-body text-text-secondary dark:text-text-secondary-dark w-full">
               Structured routines give children a sense of security and help them build positive habits.

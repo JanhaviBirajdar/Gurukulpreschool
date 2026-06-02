@@ -52,8 +52,8 @@ export default function Navbar() {
             </motion.div>
             <div className="flex flex-col">
               <span className="font-heading font-extrabold text-xl md:text-2xl leading-tight">
-                <span className="text-candy">Gurukul</span>{' '}
-                <span className="text-lavender dark:text-lavender-light">Pre School</span>
+                <span className="text-blue-600">Gurukul</span>{' '}
+                <span className="text-blue-600">Pre School</span>
               </span>
             </div>
           </Link>

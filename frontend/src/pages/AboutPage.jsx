@@ -82,7 +82,7 @@ export default function AboutPage() {
             <Heart className="w-6 h-6 text-candy fill-candy/20" /> Our Story
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 font-heading text-text-primary dark:text-text-primary-dark tracking-tight">
-            Nurturing <span className="gradient-text">Little Minds</span>
+            Nurturing <span className="text-blue-600">Little Minds</span>
           </h1>
           <p className="text-center text-xl md:text-2xl max-w-3xl font-body font-medium text-text-secondary dark:text-text-secondary-dark leading-relaxed">
             Founded with love and dedication, Gurukul Pre School has been a second home for children for over a decade. We believe in creating a joyful, safe, and stimulating environment where every child blooms.
@@ -133,7 +133,7 @@ export default function AboutPage() {
             className="flex-1 space-y-6"
           >
             <h2 className="text-3xl md:text-4xl font-extrabold font-heading text-text-primary dark:text-text-primary-dark">
-              A Message from <br /><span className="gradient-text">Our Founder</span>
+              A Message from <br /><span className="text-blue-600">Our Founder</span>
             </h2>
             <div className="text-5xl text-candy opacity-20 font-serif leading-none">"</div>
             <p className="text-center text-xl md:text-2xl font-body italic text-text-secondary dark:text-text-secondary-dark leading-relaxed font-medium">
@@ -165,7 +165,7 @@ export default function AboutPage() {
               ✨ Core Values
             </span>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 font-heading text-text-primary dark:text-text-primary-dark tracking-tight">
-              Why Choose <span className="gradient-text">Us?</span>
+              Why Choose <span className="text-blue-600">Us?</span>
             </h2>
             <p className="text-center text-lg md:text-xl max-w-3xl font-body text-text-secondary dark:text-text-secondary-dark font-medium leading-relaxed">
               Our core values are the foundation of everything we do. We promise to provide the best start for your little one.
@@ -237,7 +237,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-extrabold text-center mb-8 font-heading text-text-primary dark:text-text-primary-dark"
           >
-            Our <span className="gradient-text">Journey</span> 🚀
+            Our <span className="text-blue-600">Journey</span> 🚀
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
